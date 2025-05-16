@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+}
+
+/* ------ HEADER ------- */
+.header{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #ccc;
+    height: 60px;
+    position: sticky;
+    top: 0;
+}
+
+.header--menu{
+    display: none;
+
+    & .menu-item{
+        display: block;
+        margin: 3px 0;
+        width: 30px;
+        height: 4px;
+        background-color: #000;
+    }
+}
+
+.header--nav{
+    & .nav-list{
+        display: flex;
+        list-style-type: none;
+        gap: 20px;
+        margin: 0;
+
+        & li{
+            padding: 10px 7px;
+            transition: border-bottom 15s;
+
+            & a{
+                text-decoration: none;
+            }
+        }
+    }
+}
+/* ---------------- END HEADER --------------- */
+
+/* MEDIA QUERIES */
+@media (max-width: 700px){
+    .header--menu{
+        display: block;
+    }
+
+    .header--nav{
+        display: none;
+        box-sizing: border-box;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        & .nav-list{
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            height: 100%;
+            margin-left: auto;
+            width: 50%;
+            background-color: #ccc;
+            flex-direction: column;
+            padding: 0;
+            gap: 0;
+
+            & li{
+                margin: 0;
+                max-width: 100%;
+                padding: 10px;
+                border-top: 1px solid #000;
+            }
+        }
+    }
+
+    .header--nav.activo{
+        display: block;
+        height: calc(100vh - 60px);
+    }
+
+    .header--nav::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+    }
+
+    body.no-scroll {
+        overflow: hidden;
+    }
+}

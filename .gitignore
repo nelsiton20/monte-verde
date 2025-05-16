@@ -1,0 +1,55 @@
+# Entorno virtual
+env/
+venv/
+ENV/
+.venv/
+
+# Archivos compilados de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos temporales
+*.log
+*.pot
+*.pyc
+*.pyo
+*.swp
+*.tmp
+
+# Archivos de base de datos
+*.sqlite3
+
+# Archivos de configuración de Django
+*.secret
+*.env
+
+# Archivos de migración que no quieres compartir (opcional)
+# **/migrations/
+
+# Archivos de caché
+.cache/
+*.cache
+
+# Archivos de media y estáticos generados
+staticfiles/
+
+# Archivos de configuración del IDE
+.vscode/
+.idea/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de pruebas
+coverage.xml
+htmlcov/
+.tox/
+.pytest_cache/
+.noseids
+
+# Archivos de herramientas
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
