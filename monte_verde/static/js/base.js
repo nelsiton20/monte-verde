@@ -12,6 +12,7 @@ hamburguesa.addEventListener("click", () => {
 nav.addEventListener("click", (e) => {
     console.log('clickeando el nav');
     nav.classList.remove('activo');
+    body.classList.remove("no-scroll");
 })
 
 navList.addEventListener("click", (e) => {

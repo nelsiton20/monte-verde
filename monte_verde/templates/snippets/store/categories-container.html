@@ -1,0 +1,21 @@
+{% load static %}
+
+<section class="">
+    <button class="filter-button">
+        <span class="filter--span-img filter--span"><img src="{% static 'img/filter.png' %}" class="filter-img"></span>
+        <span class="filter--span-text filter--span">FILTRAR</span>
+    </button>
+    <div class="background-categories-container"></div>
+    <div class="categories-container">
+        <a href="{% url 'store' %}" class="categories--item">
+            <p>Todos</p>
+            <span><img src="{% static 'img/flecha.png' %}" class="item-img"></span>
+        </a>
+        {% for category in categories %}
+            <a href="{% url 'store-category' category.slug %}" class="categories--item">
+                <p>{{ category.name }}</p>
+                <span><img src="{% static 'img/flecha.png' %}" class="item-img"></span>
+            </a>
+        {% endfor %} 
+    </div>
+</section>

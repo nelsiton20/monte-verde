@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{% block title %}{% endblock %}</title>
+    <title>Monte verde {% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href={% block style %} {% endblock %}>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,10 +21,10 @@
         </div>
         <nav class="header--nav">
             <ul class="nav-list">
-                <li><a href="#">Inicio</a></li>
+                <li><a href="{% url 'home' %}">Inicio</a></li>
                 <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Tienda</a></li>
-                <li><a href="#">Servicios</a></li>
+                <li><a href="{% url 'store' %}">Tienda</a></li>
+                <li><a href="{% url 'services' %}">Servicios</a></li>
                 <li><a href="#">Proyectos</a></li>
             </ul>
         </nav>
@@ -33,5 +33,10 @@
     {% endblock %}
 
 <script src="{% static 'js/base.js' %}"></script>
+<script src={% block srcJS %} {% endblock %}></script>
+<script>
+    {% block codeJS %}
+    {% endblock %}
+</script>
 </body>
 </html>

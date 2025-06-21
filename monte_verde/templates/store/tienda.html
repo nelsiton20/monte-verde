@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block style %} {% static 'css/store/tienda.css' %} {% endblock %}
+
+{% block content %}
+    <div class="store-page--container">
+        {% include 'snippets/store/categories-container.html' %}
+        {% include 'snippets/store/product-container.html' %}
+    </div>
+{% endblock %}
+
+{% block srcJS %} {% static 'js/store/tienda.js' %} {% endblock %}

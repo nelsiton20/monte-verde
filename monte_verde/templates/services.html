@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %} - Servicios {% endblock %}
+
+{% load static %}
+{% block style %} {% static 'css/services.css' %} {% endblock %}
+
+{% block content %}
+    <h1>Servicios</h1>
+    <main class="services-container">
+        <div class="services--item">
+            <div class="services--info">
+                <div class="info--image-container">
+                    <img src="{% static 'img/servicio1.jpeg' %}">
+                </div>
+                <div class="info--description">
+                    <h2>Servicio 1</h2>
+                    <p>Servicio especializado de instalación y plantado de grass americano, ideal para jardines residenciales, áreas recreativas, parques y espacios públicos.</p>
+                </div>
+            </div>
+            <div class="services--button-container">
+                <button>Contratar</button>
+            </div>
+        </div>
+        <div class="services--item">
+            <div class="services--info">
+                <div class="info--image-container">
+                    <img src="{% static 'img/servicio1.jpeg' %}">
+                </div>
+                <div class="info--description">
+                    <h2>Servicio 2</h2>
+                    <p>Servicio especializado de instalación y plantado de grass americano, ideal para jardines residenciales, áreas recreativas, parques y espacios públicos.</p>
+                </div>
+            </div>
+            <div class="services--button-container">
+                <button>Contratar</button>
+            </div>
+        </div>
+        <div class="services--item">
+            <div class="services--info">
+                <div class="info--image-container">
+                    <img src="{% static 'img/servicio1.jpeg' %}">
+                </div>
+                <div class="info--description">
+                    <h2>Servicio 3</h2>
+                    <p>Servicio especializado de instalación y plantado de grass americano, ideal para jardines residenciales, áreas recreativas, parques y espacios públicos.</p>
+                </div>
+            </div>
+            <div class="services--button-container">
+                <button>Contratar</button>
+            </div>
+        </div>
+        <div class="services--item">
+            <div class="services--info">
+                <div class="info--image-container">
+                    <img src="{% static 'img/servicio1.jpeg' %}">
+                </div>
+                <div class="info--description">
+                    <h2>Servicio 4</h2>
+                    <p>Servicio especializado de instalación y plantado de grass americano, ideal para jardines residenciales, áreas recreativas, parques y espacios públicos.</p>
+                </div>
+            </div>
+            <div class="services--button-container">
+                <button>Contratar</button>
+            </div>
+        </div>
+    </main>
+
+    {% include 'snippets/form.html' %}
+{% endblock %}

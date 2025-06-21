@@ -6,13 +6,15 @@ body{
 .header{
     box-sizing: border-box;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 20px 30px;
     background-color: #ccc;
     height: 60px;
     position: sticky;
     top: 0;
+    z-index: 10;
+    gap: 30px;
 }
 
 .header--menu{
@@ -28,6 +30,8 @@ body{
 }
 
 .header--nav{
+    border: 1px solid #000;
+
     & .nav-list{
         display: flex;
         list-style-type: none;

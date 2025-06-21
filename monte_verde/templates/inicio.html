@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-{% block title %} Monte Verde {% endblock %}
 {% load static %}
 {% block style %} {% static 'css/inicio.css' %} {% endblock %}
 
@@ -14,21 +13,47 @@
             </div>
             <div class="product--item-container">
                 <div class="item">
-                    <img src="{% static 'img/producto1.jpg' %}">
-                    <h3>Producto 1</h3>
+                    <div class="image-container">
+                        <img src="{% static 'img/saco.jpg' %}">
+                    </div>
+                    <div class="info-container">
+                        <h3>Producto 1</h3>
+                    </div>
                 </div>
                 <div class="item">
-                    <img src="{% static 'img/producto1.jpg' %}">
-                    <h3>Producto 2</h3>
+                    <div class="image-container">
+                        <img src="{% static 'img/saco2.jpg' %}">
+                    </div>
+                    <div class="info-container">
+                        <h3>Producto 2</h3>
+                    </div>
                 </div>
                 <div class="item">
-                    <img src="{% static 'img/producto1.jpg' %}" >
-                    <h3>Producto 3</h3>
+                    <div class="image-container">
+                        <img src="{% static 'img/saco3.jpeg' %}">
+                    </div>
+                    <div class="info-container">
+                        <h3>Producto 3</h3>
+                    </div>
                 </div>
                 <div class="item">
-                    <img src="{% static 'img/producto1.jpg' %}">
-                    <h3>Producto 4</h3>
+                    <div class="image-container">
+                        <img src="{% static 'img/saco4.png' %}">
+                    </div>
+                    <div class="info-container">
+                        <h3>Producto 4</h3>
+                    </div>
                 </div>
+            </div>
+            <div class="product-cr--item-container">
+                <button class="prev">❮</button>
+                <div class="image-container">
+                    <img src="{% static 'img/saco4.png' %}" id="img-p">
+                </div>
+                <div class="info-container">
+                    <h3 class="product-title">Producto 1</h3>
+                </div>
+                <button class="next">❯</button>
             </div>
         </article>
         <article class="product">
@@ -37,23 +62,144 @@
             </div>
             <div class="product--item-container">
                 <div class="item">
-                    <img src="{% static 'img/producto1.jpg' %}"> 
-                    <h3>Producto 5</h3>
+                    <div class="image-container">
+                        <img src="{% static 'img/saco.jpg' %}">
+                    </div>
+                    <div class="info-container">
+                        <h3>Producto 1</h3>
+                    </div>
                 </div>
                 <div class="item">
-                    <img src="{% static 'img/producto1.jpg' %}"> 
-                    <h3>Producto 6</h3>
+                    <div class="image-container">
+                        <img src="{% static 'img/saco.jpg' %}">
+                    </div>
+                    <div class="info-container">
+                        <h3>Producto 1</h3>
+                    </div>
                 </div>
                 <div class="item">
-                    <img src="{% static 'img/producto1.jpg' %}"> 
-                    <h3>Producto 7</h3>
+                    <div class="image-container">
+                        <img src="{% static 'img/producto1.jpg' %}">
+                    </div> 
+                    <div class="info-container">
+                        <h3>Producto 1</h3>
+                    </div>
                 </div>
                 <div class="item">
-                    <img src="{% static 'img/producto1.jpg' %}"> 
-                    <h3>Producto 8</h3>
+                    <div class="image-container">
+                        <img src="{% static 'img/planta1.png' %}">
+                    </div>
+                    <div class="info-container">
+                        <h3>Producto 1</h3>
+                    </div>
                 </div>
+            </div>
+            <div class="product-cr--item-container">
+                <button class="prev prevs">❮</button>
+                <div class="image-container">
+                    <img src="{% static 'img/saco4.png' %}" id="img-s">
+                </div>
+                <div class="info-container">
+                    <h3 class="service-title">Servicio 1</h3>
+                </div>
+                <button class="next nexts">❯</button>
             </div>
         </article>
     </section>
-
+    <section class="customer-container">
+        <div class="customer--title-container">
+            <h2>Valoraciones de nuestros clientes</h2>
+        </div>
+        <div class="customer--reviews-container">
+            <article class="reviews-item">
+                <div class="item-assessment">
+                    <span><img src="{% static 'img/estrella.png' %}"></span>
+                    <span><img src="{% static 'img/estrella.png' %}"></span>
+                    <span><img src="{% static 'img/estrella.png' %}"></span>
+                    <span><img src="{% static 'img/estrella.png' %}"></span>
+                    <span><img src="{% static 'img/estrella.png' %}"></span>
+                </div>
+                <div class="item-client">
+                    <h5>Cliente 1</h5>
+                    <img src="{% static 'img/client.jpeg' %}">
+                </div>
+            </article>
+            <article class="reviews-item">
+                <div class="item-assessment">
+                    <span><img src="{% static 'img/estrella.png' %}"></span>
+                    <span><img src="{% static 'img/estrella.png' %}"></span>
+                    <span><img src="{% static 'img/estrella.png' %}"></span>
+                    <span><img src="{% static 'img/estrella.png' %}"></span>
+                    <span><img src="{% static 'img/estrella.png' %}"></span>
+                </div>
+                <div class="item-client">
+                    <h5>Cliente 2</h5>
+                    <img src="{% static 'img/client.jpeg' %}">
+                </div>
+            </article>
+            <article class="reviews-item">
+                <div class="item-assessment">
+                    <span><img src="{% static 'img/estrella.png' %}"></span>
+                    <span><img src="{% static 'img/estrella.png' %}"></span>
+                    <span><img src="{% static 'img/estrella.png' %}"></span>
+                    <span><img src="{% static 'img/estrella.png' %}"></span>
+                    <span><img src="{% static 'img/estrella.png' %}"></span>
+                </div>
+                <div class="item-client">
+                    <h5>Cliente 3</h5>
+                    <img src="{% static 'img/client.jpeg' %}">
+                </div>
+            </article>
+        </div>
+    </section>
+    <section class="quote-container">
+        <h2 class="quote--title">Cotiza con nosotros</h2>
+        <div class="form-container">
+            <div class="form--image-container">
+                <img src="{% static 'img/form.jpeg' %}">
+            </div>
+            <div class="form">
+                <p>¿Buscas los mejores productos y especialistas en áreas verdes?</p>
+                <form>
+                    <input placeholder="nombre">
+                    <input placeholder="telefono">
+                    <input placeholder="Servicio a solicitar">
+                    <textarea placeholder="Déjanos un mensaje"></textarea>
+                    <button>Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
 {% endblock %}
+
+{% block codeJS %}
+    const images = {
+        'products': [
+            {
+                name: 'Producto 1',
+                src: "{% static 'img/saco.jpg' %}",
+            }, {
+                name: 'Producto 2',
+                src: "{% static 'img/saco2.jpg' %}",
+            }, {
+                name: 'Producto 3',
+                src: "{% static 'img/saco3.jpeg' %}"
+            }
+        ], 
+        'services' : [
+            {
+                name: 'Servicio 1',
+                src: "{% static 'img/saco.jpg' %}",
+            }, {
+                name: 'Servicio 2',
+                src: "{% static 'img/saco2.jpg' %}",
+            }, {
+                name: 'Servicio 3',
+                src: "{% static 'img/saco3.jpeg' %}"
+            }
+        ]
+    };
+{% endblock %}
+
+{% block srcJS %} {% static 'js/inicio.js' %} {% endblock %}
