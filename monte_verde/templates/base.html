@@ -1,3 +1,7 @@
+{% url 'store' as store %}
+{% url 'store-category' as category %}
+{% url 'search' as search %}
+
 {% load static %}
 
 <!DOCTYPE html>
@@ -19,6 +23,11 @@
             <span class="menu-item"></span>
             <span class="menu-item"></span>
         </div>
+        {% if request.resolver_match.url_name == 'store' or request.resolver_match.url_name == 'search' or request.resolver_match.url_name == 'store-category' %}
+            <form action="{% url 'search' %}">
+                <input type="text" placeholder="Buscar producto" name="q">
+            </form>
+        {% endif %}
         <nav class="header--nav">
             <ul class="nav-list">
                 <li><a href="{% url 'home' %}">Inicio</a></li>
@@ -26,6 +35,10 @@
                 <li><a href="{% url 'store' %}">Tienda</a></li>
                 <li><a href="{% url 'services' %}">Servicios</a></li>
                 <li><a href="#">Proyectos</a></li>
+                <li class="list--shopping-cart">
+                    <a href="{% url 'shopping_cart' %}"><img src="{% static 'img/shopping-cart.png' %}"></a>
+                    <span class="shopping-cart--count">0</span>
+                </li>
             </ul>
         </nav>
     </header>

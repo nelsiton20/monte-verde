@@ -14,12 +14,12 @@
                     <img src="{% static 'img/servicio1.jpeg' %}">
                 </div>
                 <div class="info--description">
-                    <h2>Servicio 1</h2>
+                    <h2 class="description--title">Servicio 1</h2>
                     <p>Servicio especializado de instalación y plantado de grass americano, ideal para jardines residenciales, áreas recreativas, parques y espacios públicos.</p>
                 </div>
             </div>
             <div class="services--button-container">
-                <button>Contratar</button>
+                <button class="button">Contratar</button>
             </div>
         </div>
         <div class="services--item">
@@ -28,12 +28,12 @@
                     <img src="{% static 'img/servicio1.jpeg' %}">
                 </div>
                 <div class="info--description">
-                    <h2>Servicio 2</h2>
+                    <h2 class="description--title">Servicio 2</h2>
                     <p>Servicio especializado de instalación y plantado de grass americano, ideal para jardines residenciales, áreas recreativas, parques y espacios públicos.</p>
                 </div>
             </div>
             <div class="services--button-container">
-                <button>Contratar</button>
+                <button class="button">Contratar</button>
             </div>
         </div>
         <div class="services--item">
@@ -42,12 +42,12 @@
                     <img src="{% static 'img/servicio1.jpeg' %}">
                 </div>
                 <div class="info--description">
-                    <h2>Servicio 3</h2>
+                    <h2 class="description--title">Servicio 3</h2>
                     <p>Servicio especializado de instalación y plantado de grass americano, ideal para jardines residenciales, áreas recreativas, parques y espacios públicos.</p>
                 </div>
             </div>
             <div class="services--button-container">
-                <button>Contratar</button>
+                <button class="button">Contratar</button>
             </div>
         </div>
         <div class="services--item">
@@ -56,15 +56,17 @@
                     <img src="{% static 'img/servicio1.jpeg' %}">
                 </div>
                 <div class="info--description">
-                    <h2>Servicio 4</h2>
+                    <h2 class="description--title">Servicio 4</h2>
                     <p>Servicio especializado de instalación y plantado de grass americano, ideal para jardines residenciales, áreas recreativas, parques y espacios públicos.</p>
                 </div>
             </div>
             <div class="services--button-container">
-                <button>Contratar</button>
+                <button class="button">Contratar</button>
             </div>
         </div>
     </main>
 
     {% include 'snippets/form.html' %}
 {% endblock %}
+
+{% block srcJS %} {% static 'js/services.js' %} {% endblock %}

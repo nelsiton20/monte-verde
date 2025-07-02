@@ -18,3 +18,16 @@ nav.addEventListener("click", (e) => {
 navList.addEventListener("click", (e) => {
     e.stopPropagation();
 })
+
+
+// Mostrar cantidad de productos en carrito
+if(localStorage.getItem('shopping_cart')){
+    const span = document.querySelector('.shopping-cart--count');
+
+    const products = JSON.parse(localStorage.getItem('shopping_cart'));
+    const count = products.length;
+
+    console.log('count: ' + count);
+
+    span.textContent = count;
+}

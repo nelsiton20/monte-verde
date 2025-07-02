@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block style %} {% static 'css/store/shopping-cart.css' %} {% endblock %}
+
+{% block content %}
+    <section class="cart--main-container">
+        <main class="cart-container">
+            <h2>Productos</h2>
+        </main>
+        <div class="info-buy-container">
+            <h2 class="buy-container--title">Resumen de la orden</h2>
+            <div class="order-summary-container">
+                <div class="order-container">
+                    <div class="order--product-count">
+                        <p class="order--p">Productos</p>
+                        <span class="order--count"></span>
+                    </div>
+                    <p class="order--product-price order--p"></p>
+                </div>
+                <button class="order--button">Hacer pedido</button>
+            </div>
+        </div>
+    </section>
+    <section class="empty-shopping-cart">
+        <article class="empty--container">
+            <div class="empty--info-container">
+                <img src="{% static 'img/carrito-vacio.png' %}"> 
+                <h2>Tu carro está vacío</h2>
+            </div>
+            <button><a href="{% url 'store' %}">Ir a la tienda</a></button>
+        </article>
+    </section>
+{% endblock %}
+
+{% block srcJS %} {% static 'js/store/shopping-cart.js' %} {% endblock %}

@@ -17,7 +17,24 @@ def store_by_category(request, slug):
     products = category.product_set.all()
     categories = Category.objects.all()
     
-    return render(request, 'store/category.html', {
+    return render(request, 'store/tienda.html', {
         "products": products,
         'categories': categories
     })
+
+def search(request):
+    query = request.GET.get('q')
+    resultados = []
+    categories = Category.objects.all()
+
+    if query:
+        resultados = Product.objects.filter(name__icontains=query)
+
+    return render(request, 'store/tienda.html', {
+        'query': query,
+        'products': resultados,
+        'categories': categories
+    })
+
+def shopping_cart(request):
+    return render(request, 'store/shopping-cart.html')
