@@ -168,6 +168,10 @@
         right: -350px;
         transition: right 0.5s ease-in-out;
     }
+
+    body.no-scroll {
+        overflow: hidden;
+    }
 }
 
 @media (max-width: 768px){

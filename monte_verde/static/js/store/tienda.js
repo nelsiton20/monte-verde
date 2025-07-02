@@ -1,17 +1,20 @@
 const filterButton = document.querySelector('.filter-button');
 const categoriesContainer = document.querySelector('.categories-container');
 const backgroundContainer = document.querySelector('.background-categories-container');
+const bodyTienda = document.body;
 
 // Eventos para mostrar / ocultar filtros en pantallas pequeñas
 
 filterButton.addEventListener("click", () => {
     categoriesContainer.classList.toggle('show');
     backgroundContainer.classList.toggle('show');
+    body.classList.toggle('no-scroll');
 })
 
 backgroundContainer.addEventListener("click", () => {
     categoriesContainer.classList.remove('show');
     backgroundContainer.classList.remove('show');
+    body.classList.remove('no-scroll');
 })
 
 

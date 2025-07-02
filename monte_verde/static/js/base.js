@@ -2,21 +2,18 @@ const hamburguesa = document.querySelector(".header--menu");
 const nav = document.querySelector(".header--nav");
 const body = document.body;
 const navList = document.querySelector(".nav-list");
+const backgroundNavbar = document.querySelector('.background-navbar');
 
-hamburguesa.addEventListener("click", () => {
-    nav.classList.toggle("activo");
-    console.log('hamburguesa');
+hamburguesa.addEventListener('click', () => {
+    nav.classList.toggle('show');
+    backgroundNavbar.classList.toggle('show');
     body.classList.toggle("no-scroll");
 })
 
-nav.addEventListener("click", (e) => {
-    console.log('clickeando el nav');
-    nav.classList.remove('activo');
-    body.classList.remove("no-scroll");
-})
-
-navList.addEventListener("click", (e) => {
-    e.stopPropagation();
+backgroundNavbar.addEventListener('click', () => {
+    backgroundNavbar.classList.remove('show');
+    nav.classList.remove('show');
+    body.classList.remove('no-scroll');
 })
 
 

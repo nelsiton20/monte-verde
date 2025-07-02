@@ -18,16 +18,17 @@
         <div class="header--logo">
             Monte Verde
         </div>
-        <div class="header--menu">
-            <span class="menu-item"></span>
-            <span class="menu-item"></span>
-            <span class="menu-item"></span>
-        </div>
         {% if request.resolver_match.url_name == 'store' or request.resolver_match.url_name == 'search' or request.resolver_match.url_name == 'store-category' %}
             <form action="{% url 'search' %}">
                 <input type="text" placeholder="Buscar producto" name="q">
             </form>
         {% endif %}
+        <div class="header--menu">
+            <span class="menu-item"></span>
+            <span class="menu-item"></span>
+            <span class="menu-item"></span>
+        </div>
+        <div class="background-navbar"></div>
         <nav class="header--nav">
             <ul class="nav-list">
                 <li><a href="{% url 'home' %}">Inicio</a></li>
@@ -36,8 +37,12 @@
                 <li><a href="{% url 'services' %}">Servicios</a></li>
                 <li><a href="#">Proyectos</a></li>
                 <li class="list--shopping-cart">
-                    <a href="{% url 'shopping_cart' %}"><img src="{% static 'img/shopping-cart.png' %}"></a>
-                    <span class="shopping-cart--count">0</span>
+                    <a href="{% url 'shopping_cart' %}">
+                        <div class="list-container-image">
+                            <img src="{% static 'img/shopping-cart.png' %}">
+                            <span class="shopping-cart--count">0</span>
+                        </div>
+                    </a>
                 </li>
             </ul>
         </nav>
