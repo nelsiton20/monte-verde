@@ -16,11 +16,11 @@
 <body>
     <header class="header">
         <div class="header--logo">
-            Monte Verde
+            <img src="{% static 'img/logo.png' %}">
         </div>
         {% if request.resolver_match.url_name == 'store' or request.resolver_match.url_name == 'search' or request.resolver_match.url_name == 'store-category' %}
-            <form action="{% url 'search' %}">
-                <input type="text" placeholder="Buscar producto" name="q">
+            <form action="{% url 'search' %}" class="header--form">
+                <input type="text" placeholder="Buscar producto" name="q" class="header--form--input">
             </form>
         {% endif %}
         <div class="header--menu">
@@ -31,22 +31,57 @@
         <div class="background-navbar"></div>
         <nav class="header--nav">
             <ul class="nav-list">
-                <li><a href="{% url 'home' %}">Inicio</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="{% url 'store' %}">Tienda</a></li>
-                <li><a href="{% url 'services' %}">Servicios</a></li>
-                <li><a href="#">Proyectos</a></li>
-                <li class="list--shopping-cart">
-                    <a href="{% url 'shopping_cart' %}">
-                        <div class="list-container-image">
-                            <img src="{% static 'img/shopping-cart.png' %}">
-                            <span class="shopping-cart--count">0</span>
-                        </div>
+                <div class="nav-list--item-container">
+                    <a href="{% url 'home' %}" class="nav-list--item-container--link">
+                        <span class="nav-list--item-container-icon"><img src="{% static 'img/nav-icons/home.png' %}"></span>
+                        <li>Inicio</li>
                     </a>
-                </li>
+                </div>
+                <div class="nav-list--item-container">
+                    <a href="#" class="nav-list--item-container--link">
+                        <span class="nav-list--item-container-icon"><img src="{% static 'img/nav-icons/us.png' %}"></span>   
+                        <li>Nosotros</li>
+                    </a>
+                </div>
+                <div class="nav-list--item-container">
+                    <a href="{% url 'store' %}" class="nav-list--item-container--link">
+                        <span class="nav-list--item-container-icon"><img src="{% static 'img/nav-icons/store.png' %}"></span>
+                        <li>Tienda</li>
+                    </a>
+                </div>
+                <div class="nav-list--item-container">
+                    <a href="{% url 'services' %}" class="nav-list--item-container--link">
+                        <span class="nav-list--item-container-icon"><img src="{% static 'img/nav-icons/services.png' %}"></span>
+                        <li>Servicios</li>
+                    </a>
+                </div>
+                <div class="nav-list--item-container">
+                    <a href="#" class="nav-list--item-container--link">
+                        <span class="nav-list--item-container-icon"><img src="{% static 'img/nav-icons/project.png' %}"></span>
+                        <li>Proyectos</li>
+                    </a>
+                </div>
+                <div class="nav-list--item-container">
+                    <a href="{% url 'shopping_cart' %}" class="nav-list--item-container--link">
+                        <li class="list--shopping-cart">
+                            <div class="list-container-image">
+                                <img src="{% static 'img/shopping-cart.png' %}">
+                                <span class="shopping-cart--count">0</span>
+                            </div>
+                        </li>
+                    </a>    
+                </div>
             </ul>
         </nav>
     </header>
+    {% if request.resolver_match.url_name == 'store' or request.resolver_match.url_name == 'search' or request.resolver_match.url_name == 'store-category' %}
+    <div class="base--form--container">
+        <form action="{% url 'search' %}" class="header--form form-responsive">
+            <input type="text" placeholder="Buscar producto" name="q" class="header--form--input">
+        </form>
+    </div>    
+    {% endif %}
+    
     {% block content %}
     {% endblock %}
 

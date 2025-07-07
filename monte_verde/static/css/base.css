@@ -9,12 +9,19 @@ body{
     justify-content: space-around;
     align-items: center;
     padding: 20px 30px;
-    background-color: #ccc;
+    background-color: #fff;
     height: 60px;
     position: sticky;
     top: 0;
     z-index: 10;
     gap: 30px;
+    box-shadow: 0 1px 8px #0005;
+}
+
+.header--logo{
+    & img{
+        width: 120px;
+    }
 }
 
 .header--menu{
@@ -29,26 +36,54 @@ body{
     }
 }
 
-/*.header--nav{
-    border: 1px solid #000;
-}*/
-
 .nav-list{
     display: flex;
     list-style-type: none;
     align-items: center;
-    gap: 20px;
+    gap: 24px;
     margin: 0;
 
-    & li{
+    /*& li{
+        font-size: 1rem;
+        font-weight: 600;
         transition: border-bottom 15s;
 
         & a{
             display: block;
             padding: 10px 7px;
+            color: #056124;
             text-decoration: none;
         }
-    }
+
+        & a:hover{
+            color: #20ac25;
+        }
+    }*/
+}
+
+.nav-list--item-container{
+    box-sizing: border-box;
+}
+
+.nav-list--item-container--link{
+    display: flex;
+    gap: 10px;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #056124;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.nav-list--item-container--link:hover{
+    color: #20ac25;
+}   
+
+.nav-list--item-container-icon{
+    display: none;
 }
 
 .list-container-image{
@@ -56,7 +91,8 @@ body{
     position: relative;
 
         & span{
-            background-color: #ccc;
+            background-color: #056124;
+            color: #fff;
             box-sizing: border-box;
             text-align: center;
             display: block;
@@ -87,7 +123,36 @@ body{
 .background-navbar.show{
     display: block;
 }
+
+.base--form--container{
+    padding: 20px;
+    display: none;
+}
 /* ---------------- END HEADER --------------- */
+
+
+/* ----------- BUSCADOR -------------- */
+
+.header--form--input{
+    box-sizing: border-box;
+    padding: 8px 16px;
+    border-radius: 1rem;
+    border: none;
+    border: 1px solid #303030;
+    outline: none;
+    font-size: 1rem;
+    color: #303030;
+}
+
+.header--form--input::placeholder{
+    color: #aaa;
+}
+
+.header--form--input:focus{
+    border: 1px solid #20ac25;
+}
+/* ----------------------------------- */
+
 
 /* MEDIA QUERIES */
 @media (max-width: 1000px){
@@ -97,7 +162,7 @@ body{
 
     .header--nav{
         box-sizing: border-box;
-        background-color: #ccc;
+        background-color: #fff;
         position: fixed;
         top: 60px;
         bottom: 0;
@@ -106,17 +171,23 @@ body{
         transition: right 0.5s ease-in-out;
     }
 
+    .nav-list--item-container{
+        width: 100%;
+        border-top: 1px solid #e0e0e0;
+    }
+
     .nav-list{
         flex-direction: column;
         padding: 0;
         gap: 0;
+    }
 
-        & li{
-            margin: 0;
-            box-sizing: border-box;
-            width: 100%;
-            border: 1px solid #000;
-        }
+    .nav-list--item-container--link{
+        padding: 8px 16px;
+    }
+
+    .nav-list--item-container-icon{
+        display: block;
     }
 
     body.no-scroll {
@@ -124,9 +195,27 @@ body{
     }
 }
 
-@media (max-width: 550px){
+@media (max-width: 600px){
+    .header--form{
+        display: none;
+    }
+
     .header--nav{
         right: -100%;
         width: 90%;
+    }
+
+    .base--form--container{
+        display: block;;
+    }
+
+    .form-responsive{
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+
+        & input{
+            width: 100%;
+        }
     }
 }
