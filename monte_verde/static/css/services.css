@@ -1,3 +1,9 @@
+:root{
+    --verde-bosque: #056124;
+    --gris-oscuro: #303030;
+    --verde-menta: #20ac25;
+}
+
 h1{
     color: #056124;
     text-align: center;
@@ -15,7 +21,6 @@ h1{
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     padding: 10px;
-    background-color: #f9f9f9;
 }
 
 .services--item{
@@ -25,6 +30,17 @@ h1{
     background-color: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     border-radius: 10px;
+    transition: filter 2s ease;
+    /*opacity: 0.9;*/
+}
+
+.services--item:hover{
+    /*border: 1px solid var(--verde-menta);
+    transform: translateY(-5px);
+    opacity: 1;*/
+    filter: drop-shadow(0 0 10px #20ac25)
+          drop-shadow(0 0 20px #20ac25);
+    transition: filter .1s ease;
 }
 
 .services--info{
@@ -64,7 +80,7 @@ h1{
 
 .services--button-container{
     display: flex;
-    margin: 10px 0;
+    margin-top: 10px;
     justify-content: center;
 
     & button{

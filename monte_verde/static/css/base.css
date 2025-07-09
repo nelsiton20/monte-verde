@@ -1,5 +1,23 @@
+:root{
+    --verde-bosque: #056124;
+    --gris-oscuro: #303030;
+    --verde-menta: #20ac25;
+}
+
 body{
     margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+h1, h2, h3, h4, p{
+    margin: 0;
+}
+
+.body-main-container{
+    flex: 1;
 }
 
 /* ------ HEADER ------- */
@@ -42,23 +60,6 @@ body{
     align-items: center;
     gap: 24px;
     margin: 0;
-
-    /*& li{
-        font-size: 1rem;
-        font-weight: 600;
-        transition: border-bottom 15s;
-
-        & a{
-            display: block;
-            padding: 10px 7px;
-            color: #056124;
-            text-decoration: none;
-        }
-
-        & a:hover{
-            color: #20ac25;
-        }
-    }*/
 }
 
 .nav-list--item-container{
@@ -74,7 +75,7 @@ body{
     display: flex;
     align-items: center;
     color: #056124;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1rem;
 }
 
@@ -154,6 +155,74 @@ body{
 /* ----------------------------------- */
 
 
+/* -------- FOOTER -------- */
+.footer{
+    background-color: var(--verde-bosque);
+    color: #fff;
+    padding: 2rem;
+}
+
+.footer-container{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-section--title{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.about{
+    & p{
+        font-style: italic;
+        color: #ccc;
+    }
+}
+
+.links{
+    & .links-ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        & li{
+            margin-bottom: 8px;
+        }
+
+        & .links-ul--item{
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        & .links-ul--item:hover{
+            color: var(--verde-menta);
+        }
+    }
+}
+
+.contact{
+    & p{
+        color: #ccc;
+        margin-bottom: 8px;
+    }
+}
+
+.social--item{
+    display: block;
+    margin-bottom: 8px;
+    opacity: 0.5;
+}
+
+.social--item:hover{
+    opacity: 1;
+}
+/* ------------------------ */
+
+
 /* MEDIA QUERIES */
 @media (max-width: 1000px){
     .header--menu{
@@ -193,6 +262,21 @@ body{
     body.no-scroll {
         overflow: hidden;
     }
+
+    .footer-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, auto));
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px){
+    .footer-container{
+        grid-template-columns: auto auto;
+        gap: 1.25rem;
+        justify-content: space-around;
+    }
+    
 }
 
 @media (max-width: 600px){

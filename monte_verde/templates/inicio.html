@@ -4,16 +4,13 @@
 
 {% block content %}
     <div class="title-container">
-        <!--<h1>Mensaje de inicio - monte verde</h1>-->
         <div class="title-container--content-container">
-            <h1><span>CULTIVA</span> NATURALEZA RESPIRA <span>VIDA</span></h1>
+            <h1 class="title-container--content-container--title"><span>CULTIVA</span> NATURALEZA RESPIRA <span>VIDA</span></h1>
         </div>
     </div>
     <section class="product-container">
-        <article class="product">
-            <div class="product--title">
-                <h2>Tienda</h2>
-            </div>
+        <fieldset class="product">
+            <legend class="product--legend">Tienda</legend>
             <div class="product--item-container">
                 <div class="item">
                     <div class="image-container">
@@ -58,11 +55,9 @@
                 </div>
                 <button class="next">❯</button>
             </div>
-        </article>
-        <article class="product">
-            <div class="product--title">
-                <h2>Servicios</h2>
-            </div>
+        </fieldset>
+        <fieldset class="product">
+            <legend class="product--legend">Servicios</legend>
             <div class="product--item-container">
                 <div class="item">
                     <div class="image-container">
@@ -107,7 +102,7 @@
                 </div>
                 <button class="next nexts">❯</button>
             </div>
-        </article>
+        </fieldset>
     </section>
     <section class="customer-container">
         <div class="customer--title-container">
@@ -163,11 +158,12 @@
             </div>
             <div class="form">
                 <p>¿Buscas los mejores productos y especialistas en áreas verdes?</p>
-                <form>
-                    <input placeholder="nombre">
-                    <input placeholder="telefono">
-                    <input placeholder="Servicio a solicitar">
-                    <textarea placeholder="Déjanos un mensaje"></textarea>
+                <form method="POST">
+                    {% csrf_token %}
+                    <input placeholder="nombre" name="name">
+                    <input placeholder="telefono" name="phone">
+                    <input placeholder="Servicio a solicitar" name="service">
+                    <textarea placeholder="Déjanos un mensaje" class="message"></textarea>
                     <button>Enviar</button>
                 </form>
             </div>
