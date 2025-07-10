@@ -44,40 +44,40 @@
                 <div class="service-container--img-container"><img src="{% static 'img/servicio1.jpeg' %}"></div>
                 <div class="service-container--info-container">
                     <div class="service-container--info-container--title-container">
-                        <h3>Diseño de Jardines</h3>
+                        <h3 class="title-container--content">Diseño de Jardines</h3>
                     </div>
                     <p>Servicio especializado de instalación y plantado de grass americano, ideal para jardines residenciales, áreas recreativas, parques y espacios públicos.</p>
-                    <button>Contratar</button>
+                    <button class="service-container--info-container--button">Contratar</button>
                 </div class="service-container--info-container">
             </div>
             <div class="services-container--service-container">
                 <div class="service-container--img-container"><img src="{% static 'img/servicio1.jpeg' %}"></div>
                 <div class="service-container--info-container">
                     <div class="service-container--info-container--title-container">
-                        <h3>Mantenimiento de Áreas Verdes</h3>
+                        <h3 class="title-container--content">Mantenimiento de Áreas Verdes</h3>
                     </div>
                     <p>Servicio especializado de instalación y plantado de grass americano, ideal para jardines residenciales, áreas recreativas, parques y espacios públicos.</p>
-                    <button>Contratar</button>
+                    <button class="service-container--info-container--button">Contratar</button>
                 </div>
             </div>
             <div class="services-container--service-container">
                 <div class="service-container--img-container"><img src="{% static 'img/servicio1.jpeg' %}"></div>
                 <div class="service-container--info-container">
                     <div class="service-container--info-container--title-container">
-                        <h3>Instalación de Riego</h3>
+                        <h3 class="title-container--content">Instalación de Riego</h3>
                     </div>
                     <p>Servicio especializado de instalación y plantado de grass americano, ideal para jardines residenciales, áreas recreativas, parques y espacios públicos.</p>
-                    <button>Contratar</button>
+                    <button class="service-container--info-container--button">Contratar</button>
                 </div>
             </div>
             <div class="services-container--service-container">
                 <div class="service-container--img-container"><img src="{% static 'img/servicio1.jpeg' %}"></div>
                 <div class="service-container--info-container">
                     <div class="service-container--info-container--title-container">
-                        <h3>Asesoría en Paisajismo</h3>
+                        <h3 class="title-container--content">Asesoría en Paisajismo</h3>
                     </div>
                     <p>Servicio especializado de instalación y plantado de grass americano, ideal para jardines residenciales, áreas recreativas, parques y espacios públicos.</p>
-                    <button>Contratar</button>
+                    <button class="service-container--info-container--button">Contratar</button>
                 </div>
             </div>
         </div>
@@ -102,35 +102,6 @@
         </div>
     </section>
     
-{% endblock %}
-
-{% block codeJS %}
-    const images = {
-        'products': [
-            {
-                name: 'Producto 1',
-                src: "{% static 'img/saco.jpg' %}",
-            }, {
-                name: 'Producto 2',
-                src: "{% static 'img/saco2.jpg' %}",
-            }, {
-                name: 'Producto 3',
-                src: "{% static 'img/saco3.jpeg' %}"
-            }
-        ], 
-        'services' : [
-            {
-                name: 'Servicio 1',
-                src: "{% static 'img/saco.jpg' %}",
-            }, {
-                name: 'Servicio 2',
-                src: "{% static 'img/saco2.jpg' %}",
-            }, {
-                name: 'Servicio 3',
-                src: "{% static 'img/saco3.jpeg' %}"
-            }
-        ]
-    };
 {% endblock %}
 
 {% block srcJS %} {% static 'js/inicio.js' %} {% endblock %}
