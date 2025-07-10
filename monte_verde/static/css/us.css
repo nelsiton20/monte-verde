@@ -1,0 +1,116 @@
+:root{
+    --verde-bosque: #056124;
+    --gris-oscuro: #303030;
+    --verde-menta: #20ac25;
+    --text-color: #555;
+}
+
+h2, h3, p{
+    margin: 0;
+}
+
+/* ESTILOS DEL CONTENDOR MAIN */
+.us-main-container{
+    padding: 80px 20px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.us-main-container--content-container{
+    flex: 1;
+    text-align: justify;
+
+    & p{
+        color: var(--text-color);
+        margin-bottom: 12px;
+        font-size: 1.12rem;
+    }
+}
+
+.content-container--title-container{
+    margin-bottom: 16px;
+
+    & h2{
+        font-size: 2.5rem;
+        color: var(--verde-bosque);
+    }
+
+    & span{
+        display: block;
+        width: 80px;
+        height: 5px;
+        background-color: var(--verde-bosque);
+        border-radius: 20px;
+    }
+}
+
+.us-main-container--img-container{
+    flex: 1;
+
+    & img{
+        max-width: 100%;
+        height: auto;
+    }
+}
+/* ----------------------------- */
+
+
+/* MISIÓN - VISIÓN */
+.mision-vision-container{
+    padding: 80px 20px;
+    display: flex;
+    max-width: 1200px;
+    gap: 40px;
+    margin: 0 auto;
+}
+
+.mision-vision-container--article-container{
+    & p{
+        color: var(--text-color);
+        text-align: justify;
+        line-height: 1.6;
+    }
+}
+
+.mision-vision-container--article-container--title-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    & h3{
+        font-size: 2rem;
+        color: var(--verde-bosque);
+    }
+
+    & span{
+        display: block;
+        width: 50px;
+        height: 5px;
+        border-radius: 20px;
+        background-color: var(--verde-bosque);
+    }
+}
+
+/* --------------- */
+
+
+/* MEDIA QUERIES */
+@media (max-width: 1000px){
+    .us-main-container{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px){
+    .mision-vision-container{
+        flex-direction: column;
+    }
+}
+/* ------------- */

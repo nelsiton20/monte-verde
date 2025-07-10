@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block style %} {% static 'css/us.css' %} {% endblock %}
+
+{% block content %}
+    <main class="us-main-container">
+        <div class="us-main-container--content-container">
+            <div class="content-container--title-container">
+                <h2>Nuestra Historia</h2>
+                <span></span>
+            </div>
+            <p>En MonteVerde, creemos que la conexión con la naturaleza transforma vidas y espacios. Desde nuestros humildes comienzos, nos hemos dedicado a ofrecer plantas de la más alta calidad, asesoramiento experto y un servicio al cliente excepcional. Somos un equipo apasionado por la jardinería y el paisajismo, comprometidos con hacer de tu hogar un verdadero oasis verde.</p>
+            <p>Nos enorgullece ser un vivero que no solo vende plantas, sino que cultiva relaciones y fomenta un amor profundo por el mundo natural. ¡Te invitamos a ser parte de nuestra comunidad verde!</p>
+        </div>
+        <div class="us-main-container--img-container">
+            <img src="{% static 'img/us-image.jpeg' %}">
+        </div>
+    </main>
+    <section class="mision-vision-container">
+        <article class="mision-vision-container--article-container">
+            <div class="mision-vision-container--article-container--title-container">
+                <h3>Misión</h3>
+                <span></span>
+            </div>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </article>
+        <article class="mision-vision-container--article-container">
+            <div class="mision-vision-container--article-container--title-container">
+                <h3>Visión</h3>
+                <span></span>
+            </div>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </article>
+    </section>
+{% endblock %}
+
