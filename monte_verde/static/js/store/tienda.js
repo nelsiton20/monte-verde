@@ -68,6 +68,7 @@ function addProductToItem(product, price){
     }
 
     updateCountOfProducts();
+    showProductAddedNotification();
 }
 
 // función para actualizar cantidad de productos del ícono del carrito
@@ -81,8 +82,30 @@ const productsName = document.querySelectorAll('.product--name');
 const productButton = document.querySelectorAll('.product--button');
 const prices = document.querySelectorAll('.price-sale');
 
-for(let i=0; productButton.length; i++){
-    productButton[i].addEventListener('click', () => {
+for(let i=0; i < productButton.length; i++){
+    productButton[i].addEventListener('click', (evt) => {
+        evt.stopPropagation();
         addProductToItem(productsName[i].textContent, prices[i].textContent);
     })
 }
+
+// función para mostrar notificación de producto agregado al carrito
+function showProductAddedNotification(){
+    const notification = document.querySelector('.notification-product-container');
+    notification.classList.add('show');
+
+    setTimeout(() => {
+        notification.classList.remove('show');
+    }, 1000);
+}
+
+
+// FUNCIÓN PARA REDIRIGIR A DETALLES DEL PRODUCTO 
+const productsContainer = document.querySelectorAll('.product-container');
+
+productsContainer.forEach((product) => {
+    product.addEventListener('click', function() {
+        const slug = this.dataset.slug;
+        window.location.href = `/store/product/${slug}/`;
+    })
+})

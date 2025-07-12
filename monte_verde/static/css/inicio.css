@@ -9,6 +9,7 @@
 /* ----------- TITLE CONTAINER --------- */
 .title-container{
     background-image: url("../img/fondo-inicio2.jpg");
+    /*background-image: url("../img/vivero.jpg");*/
     height: calc(100dvh - 60px);
     width: 100%;
     background-size: cover;
@@ -170,7 +171,7 @@
 }
 
 .service-container--img-container{
-    width: 40%;
+    width: 45%;
     height: 100%;
 
     & img{

@@ -38,3 +38,7 @@ def search(request):
 
 def shopping_cart(request):
     return render(request, 'store/shopping-cart.html')
+
+def product_detail(request, slug):
+    product = get_object_or_404(Product, slug=slug)
+    return render(request, 'store/product-detail.html', {'product': product})

@@ -1,9 +1,9 @@
-const buttons = document.querySelectorAll('.button');
-const servicesTitle = document.querySelectorAll('.description--title');
+const buttons = document.querySelectorAll('.service-container--info-container--button');
+const services = document.querySelectorAll('.title-container--content');
 
 for(let i=0; i<buttons.length; i++){
     buttons[i].addEventListener('click', () => {
-        sendMessage(servicesTitle[i].textContent);        
+        sendMessageToWhatsApp(services[i].textContent);
     })
 }
 

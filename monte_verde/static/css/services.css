@@ -2,18 +2,117 @@
     --verde-bosque: #056124;
     --gris-oscuro: #303030;
     --verde-menta: #20ac25;
+    --text-color: #555;
 }
 
-h1{
-    color: #056124;
+/* PRODUCT-SERVICES MAIN CONTAINER */
+.main-products-services-container{
+    padding: 80px 20px;
     text-align: center;
-    font-size: 3rem;
-    font-weight: 700;
+}
+
+/* TÍTULO DEL CONTENEDOR PRODUCTOS-SERVICIOS */
+.main-products-services-container--title{
+    font-size: 2.5rem;
+    color: var(--verde-menta);
+    font-weight: bold;
+}
+
+/* ESTILOS PARA PONER LA LÍNEA DEBAJO DEL TÍTULO */
+.main-products-services-container--title::after{
+    content: '';
+    display: block;
+    width: 75px;
+    height: 3px;
+    border-radius: 20px;
+    background-color: var(--verde-menta);
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.services-container{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 0;
+    text-align: left;
+}
+
+.services-container--service-container{
+    box-sizing: border-box;
+    max-width: 550px;
+    height: 270px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, box-shadow 2s ease;;
+    display: flex;
+}
+
+.services-container--service-container:hover{
+    box-shadow: 0 0 30px #20ac25, 0 0 50px #20ac25;
+    transition: box-shadow .1s ease;
+}
+
+.service-container--img-container{
+    width: 45%;
+    height: 100%;
+
+    & img{
+        border-radius: 8px 0 0 8px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.service-container--info-container{
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    flex: 1;
+
+    .service-container--info-container--title-container{
+        height: 50px;
+        display: flex;
+        align-items: center;
+
+        & h3{
+            font-size: 1.5rem;
+            color: var(--verde-menta);
+        }
+    }
+
+    & p{
+        font-size: 1rem;
+        color: var(--text-color);
+    }
+
+    & button{
+        width: 130px;
+        padding: 12px 25px;
+        border-radius: 8px;
+        color: #fff;
+        background-color: var(--verde-menta);
+        border: none;
+        font-weight: bold;
+        font-size: 1rem;
+        transition: background-color .3s ease;
+    }
+
+    & button:hover{
+        background-color: #157519;
+        cursor: pointer;
+    }
 }
 
 
 /* ------------- SERVICES CONTAINER ------------ */
-.services-container{
+/*.services-container{
     margin: auto;
     box-sizing: border-box;
     width: 1000px;
@@ -31,13 +130,9 @@ h1{
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     border-radius: 10px;
     transition: filter 2s ease;
-    /*opacity: 0.9;*/
 }
 
 .services--item:hover{
-    /*border: 1px solid var(--verde-menta);
-    transform: translateY(-5px);
-    opacity: 1;*/
     filter: drop-shadow(0 0 10px #20ac25)
           drop-shadow(0 0 20px #20ac25);
     transition: filter .1s ease;
@@ -99,7 +194,7 @@ h1{
         background-color: #056124;
         transition: background-color 0.4s ease;
     }
-}
+}*/
 
 /* ------------- END SERVICES CONTAINER ------------ */
 
@@ -198,29 +293,52 @@ h1{
 
 /* --------------- MEDIA QUERIES -------------- */
 @media (max-width: 1000px){
-    .services-container{
+    /*.services-container{
         width: 100%;
     }
 
     .form-container{
         width: 100%;
+    }*/
+
+    .main-products-services-container--title{
+        font-size: 2rem;
+    }
+
+    /* CONTENEDOR DE SERVICIOS */
+    .services-container{
+        grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    }
+
+    .services-container--service-container{
+        flex-direction: column;
+        height: 400px;
+    }
+
+    .service-container--img-container{
+        width: 100%;
+        height: 40%;
     }
 } 
 
-@media (max-width: 730px){
+@media (max-width: 768px){
+    /*.services-container{
+        grid-template-columns: 1fr;
+    }*/
+    .main-products-services-container--title{
+        font-size: 1.5rem;
+    }
+
     .services-container{
         grid-template-columns: 1fr;
+        justify-items: center;
     }
 
-    /*.form-container{
-        flex-direction: column;
-    }
-
-    .form--image-container{
-        & img{
-            border-radius: 40px 40px 0 0;
+    .service-container--info-container{
+        & .service-container--info-container--title-container{
+            height: auto;
         }
-    }*/
+    }
 }
 
 
