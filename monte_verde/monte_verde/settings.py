@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-load_dotenv(dotenv_path=BASE_DIR / '.env')
+load_dotenv()
 
 
 # Quick-start development settings - unsuitable for production
@@ -29,7 +29,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'store'
+    'store',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -41,6 +42,16 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+STORAGES = {
+    "default": {
+        "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
+        "OPTIONS": {"location": "media", "file_overwrite": False}
+    }, 
+    "staticfiles": {
+        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+    }
+}
 
 ROOT_URLCONF = 'monte_verde.urls'
 
@@ -117,10 +128,19 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-MEDIA_URL = '/media/'
+#MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AWS_ACCESS_KEY_ID=str(os.getenv("AWS_ACCESS_KEY_ID"))
+AWS_SECRET_ACCESS_KEY=str(os.getenv("AWS_SECRET_ACCESS_KEY"))
+AWS_STORAGE_BUCKET_NAME=str(os.getenv("AWS_STORAGE_BUCKET_NAME"))
+AWS_S3_REGION_NAME=str(os.getenv("AWS_S3_REGION_NAME"))
+AWS_S3_CUSTOM_DOMAIN=f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
+
+
+MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/media/"

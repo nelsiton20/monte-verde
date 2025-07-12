@@ -3,6 +3,7 @@
     --gris-oscuro: #303030;
     --verde-menta: #20ac25;
     --text-color: #555;
+    --filter: #20ac25;
 }
 
 /* PRODUCT-SERVICES MAIN CONTAINER */
@@ -52,7 +53,7 @@
 }
 
 .services-container--service-container:hover{
-    box-shadow: 0 0 30px #20ac25, 0 0 50px #20ac25;
+    box-shadow: 0 0 40px var(--filter), 0 0 50px var(--filter);
     transition: box-shadow .1s ease;
 }
 
