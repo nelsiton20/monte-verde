@@ -4,6 +4,17 @@ const body = document.body;
 const navList = document.querySelector(".nav-list");
 const backgroundNavbar = document.querySelector('.background-navbar');
 
+/* EVENTO PARA CAMBIAR EL BACKGROUND DEL HEADER
+document.addEventListener('scroll', function() {
+    const header = document.querySelector('.header');
+
+    if (window.scrollY > 0) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+})*/
+
 hamburguesa.addEventListener('click', () => {
     nav.classList.toggle('show');
     backgroundNavbar.classList.toggle('show');
@@ -19,12 +30,12 @@ backgroundNavbar.addEventListener('click', () => {
 
 // Mostrar cantidad de productos en carrito
 if(localStorage.getItem('shopping_cart')){
-    const span = document.querySelector('.shopping-cart--count');
+    const span = document.querySelectorAll('.shopping-cart--count');
 
     const products = JSON.parse(localStorage.getItem('shopping_cart'));
     const count = products.length;
 
-    console.log('count: ' + count);
-
-    span.textContent = count;
+    span.forEach(s => {
+        s.textContent = count;
+    })
 }

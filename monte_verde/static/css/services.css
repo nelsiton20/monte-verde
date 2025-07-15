@@ -3,6 +3,8 @@
     --gris-oscuro: #303030;
     --verde-menta: #20ac25;
     --text-color: #555;
+    --light-grey: #f7f7f7;
+    --subrayado: #F39F1A;
 }
 
 /* PRODUCT-SERVICES MAIN CONTAINER */
@@ -13,8 +15,8 @@
 
 /* TÍTULO DEL CONTENEDOR PRODUCTOS-SERVICIOS */
 .main-products-services-container--title{
-    font-size: 2.5rem;
-    color: var(--verde-menta);
+    font-size: 2.8rem;
+    color: var(--verde-bosque);
     font-weight: bold;
 }
 
@@ -25,7 +27,7 @@
     width: 75px;
     height: 3px;
     border-radius: 20px;
-    background-color: var(--verde-menta);
+    background-color: #F39F1A;
     margin: 0 auto;
     margin-top: 20px;
 }
@@ -47,7 +49,7 @@
     height: 270px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, box-shadow 2s ease;;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, box-shadow 3s ease;;
     display: flex;
 }
 
@@ -76,17 +78,6 @@
     gap: 20px;
     flex: 1;
 
-    .service-container--info-container--title-container{
-        height: 50px;
-        display: flex;
-        align-items: center;
-
-        & h3{
-            font-size: 1.5rem;
-            color: var(--verde-menta);
-        }
-    }
-
     & p{
         font-size: 1rem;
         color: var(--text-color);
@@ -108,6 +99,17 @@
         background-color: #157519;
         cursor: pointer;
     }
+}
+
+.service-container--info-container--title-container{
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.title-container--content{
+    font-size: 1.5rem;
+    color: var(--verde-bosque);
 }
 
 
@@ -202,16 +204,27 @@
 /* ----------- QUOTE CONTAINER --------------- */
 
 .quote-container{
-    margin: 30px 0;
-    padding: 30px;
-    background-color: #f9f9f9;
+    padding: 80px 0;
+    background-color: var(--light-grey);
 }
 
 .quote--title{
-    color: #056124;
+    color: var(--verde-bosque);
     text-align: center;
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.quote--title::after{
+    content: '';
+    display: block;
+    width: 75px;
+    height: 3px;
+    background-color: var(--subrayado);
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 20px;
 }
 
 .form-container{
@@ -274,17 +287,20 @@
         }
 
         & button{
-            padding: 8px 15px;
+            padding: 12px 25px;
             background-color: #20ac25;
-            border-radius: 15px;
+            border-radius: 20px;
             border: none;
             color: #fff;
             transition: background-color .3s ease;
+            font-weight: bold;
+            font-size: 1.1rem;
         }
 
         & button:hover{
             background-color: #056124;
             transition: background-color .3s ease;
+            cursor: pointer;
         }
     }
 }
@@ -301,8 +317,8 @@
         width: 100%;
     }*/
 
-    .main-products-services-container--title{
-        font-size: 2rem;
+    .main-products-services-container--title, .quote--title{
+        font-size: 2.2rem;
     }
 
     /* CONTENEDOR DE SERVICIOS */
@@ -325,8 +341,8 @@
     /*.services-container{
         grid-template-columns: 1fr;
     }*/
-    .main-products-services-container--title{
-        font-size: 1.5rem;
+    .main-products-services-container--title, .quote--title{
+        font-size: 1.8rem;
     }
 
     .services-container{
@@ -351,6 +367,16 @@
         & img{
             border-radius: 40px 40px 0 0;
         }
+    }
+}
+
+@media (max-width: 500px){
+    .main-products-services-container--title, .quote--title{
+        font-size: 1.6rem;
+    }
+
+    .title-container--content{
+        font-size: 1.3rem;
     }
 }
 

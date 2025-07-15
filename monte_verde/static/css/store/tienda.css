@@ -8,6 +8,35 @@ body{
     background-color: #f1f1f1;
 }
 
+/* CONTENEDOR DE BARRA DE BÚSQUEDA */
+.base--form--container{
+    box-sizing: border-box;
+    padding: 20px;
+    width: 500px;
+    margin: auto;
+}
+
+.header--form--input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 16px;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #303030;
+    border: 1px solid #20ac25;
+}
+
+.header--form--input::placeholder{
+    color: #aaa;
+}
+
+.header--form--input:focus{
+    box-shadow: 0 1px 6px var(--verde-menta);
+}
+
+/* --------------------------------- */
 .store-page--container{
     box-sizing: border-box;
     width: 80%;
@@ -260,6 +289,10 @@ body{
 
     .product-list-container{
         justify-content: center;
+    }
+
+    .base--form--container{
+        width: 100%;
     }
 }
 

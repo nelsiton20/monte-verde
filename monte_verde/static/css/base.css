@@ -2,6 +2,7 @@
     --verde-bosque: #056124;
     --gris-oscuro: #303030;
     --verde-menta: #20ac25;
+    --dark-grey: #333;
 }
 
 body{
@@ -30,17 +31,34 @@ h1, h2, h3{
 .header{
     box-sizing: border-box;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px 30px;
-    background-color: #fff;
+    padding: 20px 60px;
     height: 60px;
     position: sticky;
+    /*position: fixed;*/ 
+    /*background-color: transparent;*/
     top: 0;
+    width: 100%;
     z-index: 10;
     gap: 30px;
     box-shadow: 0 1px 8px #0005;
+    background-color: #fff;
+    /*transition: background-color 0.4s ease, padding 0.4s ease;
+
+    & .nav-list--item-container--link{
+        color: #fff;
+    }*/
 }
+
+/*.header.scrolled{
+    background-color: #fff;
+    padding: 10px 30px;
+
+    & .nav-list--item-container--link{
+        color: var(--gris-oscuro);
+    }
+}*/
 
 .header--logo{
     & img{
@@ -72,30 +90,48 @@ h1, h2, h3{
     box-sizing: border-box;
 }
 
+/* ELEMENTOS DE LA BARRA DE NAVEGACIÓN */
 .nav-list--item-container--link{
     display: flex;
     gap: 10px;
-    display: block;
     width: 100%;
     text-decoration: none;
     display: flex;
     align-items: center;
-    color: #056124;
+    color: var(--dark-grey);
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 .nav-list--item-container--link:hover{
     color: #20ac25;
-}   
+}
 
+/* CARRITO DE COMPRAS RESPONSIVE */
+.nav-list--item-container.shopping-cart{
+    display: none;
+}
+
+/* ESTILOS PARA EL ITEM ACTIVO */
+.nav-list--item-container--link--li.active::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--verde-menta);
+}
+
+/* ÍCONOS QUE SE MUESTRAN EN RESPONSIVE */
 .nav-list--item-container-icon{
     display: none;
 }
 
+/* ESTILOS PARA EL ÍCONO DEL CARRITO */
 .list-container-image{
     width: 30px;
     position: relative;
+    line-height: normal;
 
         & span{
             background-color: #056124;
@@ -113,6 +149,7 @@ h1, h2, h3{
         }
 }
 
+/* BACKGROUND QUE SE ACTIVA EN RESPONSIVE */
 .background-navbar{
     display: none;
     position: absolute;
@@ -131,34 +168,7 @@ h1, h2, h3{
     display: block;
 }
 
-.base--form--container{
-    padding: 20px;
-    display: none;
-}
 /* ---------------- END HEADER --------------- */
-
-
-/* ----------- BUSCADOR -------------- */
-
-.header--form--input{
-    box-sizing: border-box;
-    padding: 8px 16px;
-    border-radius: 1rem;
-    border: none;
-    border: 1px solid #303030;
-    outline: none;
-    font-size: 1rem;
-    color: #303030;
-}
-
-.header--form--input::placeholder{
-    color: #aaa;
-}
-
-.header--form--input:focus{
-    border: 1px solid #20ac25;
-}
-/* ----------------------------------- */
 
 
 /* -------- FOOTER -------- */
@@ -265,6 +275,20 @@ h1, h2, h3{
         display: block;
     }
 
+    .nav-list--item-container--link--li.active::after{
+        display: none;
+    }
+
+    /* CARRITO DE COMPRAS RESPONSIVE */
+    .nav-list--item-container.shopping-cart{
+        display: block;
+    }
+
+    /* CONTENEDOR CARRITO PC */
+    .header--navigation-icons{
+        display: none;
+    }
+
     body.no-scroll {
         overflow: hidden;
     }
@@ -286,26 +310,8 @@ h1, h2, h3{
 }
 
 @media (max-width: 600px){
-    .header--form{
-        display: none;
-    }
-
     .header--nav{
         right: -100%;
         width: 90%;
-    }
-
-    .base--form--container{
-        display: block;;
-    }
-
-    .form-responsive{
-        box-sizing: border-box;
-        display: block;
-        width: 100%;
-
-        & input{
-            width: 100%;
-        }
     }
 }

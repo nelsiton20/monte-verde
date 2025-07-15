@@ -4,14 +4,16 @@
 {% block style %} {% static 'css/store/tienda.css' %} {% endblock %}
 
 {% block content %}
+    <div class="base--form--container">
+        <form action="{% url 'search' %}" class="header--form">
+            <input type="text" placeholder="Buscar producto" name="q" class="header--form--input">
+        </form>
+    </div>   
     <div class="store-page--container">
         {% include 'snippets/store/categories-container.html' %}
         {% include 'snippets/store/product-container.html' %}
     </div>
-    <div class="notification-product-container">
-        <img src="{% static 'img/store/check.png' %}">
-        <p>Producto agregado</p>
-    </div>
+    {% include 'snippets/store/notification.html' %}
 {% endblock %}
 
 {% block srcJS %} {% static 'js/store/tienda.js' %} {% endblock %}

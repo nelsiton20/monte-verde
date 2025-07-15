@@ -74,8 +74,11 @@ function addProductToItem(product, price){
 // función para actualizar cantidad de productos del ícono del carrito
 function updateCountOfProducts(){
     const products = JSON.parse(localStorage.getItem('shopping_cart'));
-    const count = document.querySelector('.shopping-cart--count');
-    count.textContent = products.length;
+    const count = document.querySelectorAll('.shopping-cart--count');
+
+    count.forEach(c => {
+        c.textContent = products.length;
+    })
 }
 
 const productsName = document.querySelectorAll('.product--name');

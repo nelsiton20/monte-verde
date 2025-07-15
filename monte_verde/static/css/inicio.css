@@ -54,8 +54,8 @@
 
 /* TÍTULO DEL CONTENEDOR PRODUCTOS-SERVICIOS */
 .main-products-services-container--title{
-    font-size: 2.5rem;
-    color: var(--verde-menta);
+    font-size: 2.8rem;
+    color: var(--verde-bosque);
     font-weight: bold;
 }
 
@@ -92,20 +92,6 @@
         height: 250px;
         object-fit: cover;
     }
-    
-    .grid-container--item-container--title-container{
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 10px;
-        margin-bottom: 10px;
-
-        & h3{
-            font-size: 1.75rem;
-            color: var(--verde-menta);
-        }
-    }   
 
     & p{
         line-height: 1.6;
@@ -134,6 +120,20 @@
     }
 }
 
+.grid-container--item-container--title-container{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    margin-bottom: 10px;
+
+    & h3{
+        font-size: 1.75rem;
+        color: var(--verde-bosque);
+    }
+}   
+
 .grid-container--item-container:hover{
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
@@ -151,7 +151,7 @@
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 80px 0;
+    padding-top: 40px;
     text-align: left;
 }
 
@@ -190,17 +190,6 @@
     gap: 20px;
     flex: 1;
 
-    .service-container--info-container--title-container{
-        height: 50px;
-        display: flex;
-        align-items: center;
-
-        & h3{
-            font-size: 1.5rem;
-            color: var(--verde-menta);
-        }
-    }
-
     & p{
         font-size: 1rem;
         color: var(--text-color);
@@ -222,6 +211,17 @@
         background-color: #157519;
         cursor: pointer;
     }
+}
+
+.service-container--info-container--title-container{
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.title-container--content{
+    font-size: 1.5rem;
+    color: var(--verde-menta);
 }
 
 /* ---------------------------- */
@@ -320,11 +320,62 @@
 
 /* ---------- END QUOTE CONTAINER ------------ */
 
+/* CONTENEDOR DE CONTACTO */
+.contact-section{
+    padding: 80px 0;
+    background-color: var(--light-grey);
+}
+
+.contact-article{
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    & p{
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+        color: var(--text-color);
+        line-height: 1.6;
+
+        & span{
+            font-weight: bolder;
+        }
+    }
+}
+
+.contact-article--title{
+    font-size: 2.8rem;
+    color: var(--verde-menta);
+    margin-bottom: 30px;
+}
+
+.contact-article--title::after{
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: var(--verde-menta);
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
 
 /* ------- MEDIA QUERIES -------- */
 @media (max-width: 1000px){
+    h1 {
+        font-size: 2.8em;
+    }
+
+    h2 {
+        font-size: 2.2em;
+    }
+
     .title-container{
         height: calc(70dvh - 60px);
+        /*height: 70dvh;*/
     }
 
     /* CONTENEDOR DE PRODUCTOS */
@@ -333,7 +384,7 @@
     }
 
     .main-products-services-container--title{
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     /* ------------------------ */
 
@@ -353,14 +404,26 @@
     }
     /* ------------------------ */
 
+    .contact-article--title{
+        font-size: 2.2rem;
+    }
+
     .form-container{
         width: 100%;
     }
 }
 
 @media (max-width: 768px){
+    h1 {
+        font-size: 2.2em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+
     .title-container{
         height: calc(60dvh - 60px);
+        /*height: 60dvh;*/
     }
 
     .title-container--content-container{
@@ -381,7 +444,7 @@
     }
 
     .main-products-services-container--title{
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .services-container{
@@ -394,11 +457,16 @@
             height: auto;
         }
     }
+
+    .contact-article--title{
+        font-size: 1.8rem;
+    }
 }
 
 @media (max-width: 650px){
     .title-container{
         height: calc(50dvh - 60px);
+        /*height: 50vh;*/
     }
 
     .form-container{
@@ -413,12 +481,34 @@
 }
 
 @media (max-width: 500px){
+    h1 {
+        font-size: 1.8em;
+    }
+    h2 {
+        font-size: 1.6em;
+    }
+
+    .grid-container--item-container--title-container{
+        & h3{
+            font-size: 1.3em;
+        }
+    }
+
+    .title-container--content{
+        font-size: 1.3rem;
+    }
+
     .title-container{
         height: calc(40dvh - 60px);
+        /*height: 40dvh;*/
     }
 
     .quote-container{
         padding: 10px;
+    }
+
+    .contact-article--title{
+        font-size: 1.6rem;
     }
 }
 
