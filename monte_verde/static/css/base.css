@@ -184,6 +184,8 @@ h1, h2, h3{
     justify-content: space-around;
     gap: 2rem;
     flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
 }
 
 .footer-section--title{
