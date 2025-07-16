@@ -33,6 +33,7 @@ button.addEventListener('click', () => {
 
     addProductToShoppingCart(name, price);
     showProductAddedNotification();
+    updateCountShoppingCart();
 })
 
 
@@ -44,4 +45,14 @@ function showProductAddedNotification(){
     setTimeout(() => {
         notification.classList.remove('show');
     }, 1000);
+}
+
+// función para actualizar cantidad de productos en el ícono del carrito
+function updateCountShoppingCart(){
+    const span = document.querySelectorAll('.shopping-cart--count');
+    const count = JSON.parse(localStorage.getItem('shopping_cart')).length;
+
+    span.forEach(s => {
+        s.textContent = count;
+    })
 }
