@@ -1,0 +1,57 @@
+:root{
+    --verde-bosque: #056124;
+    --gris-oscuro: #303030;
+    --verde-menta: #20ac25;
+    --text-color: #555;
+}
+
+h2, p{
+    margin: 0;
+}
+
+h2{
+    font-size: 2.5rem;
+    color: var(--verde-bosque);
+    font-weight: bold;
+    text-align: center;
+}
+
+p{
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.message-container{
+    box-sizing: border-box;
+    padding: 20px;
+    width: 500px;
+    margin: 80px auto;
+    box-shadow: 0 4px 6px #0005;
+}
+
+.message-container--header{
+    display: flex;
+    gap: 24px;
+    margin-bottom: 30px;
+    align-items: center;
+
+    & img{
+        width: 25%;
+    }
+}
+
+@media (max-width: 768px){
+    h2{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 550px){
+    h2{
+        font-size: 1.5rem;
+    }
+
+    .message-container{
+        width: 90%;
+    }
+}

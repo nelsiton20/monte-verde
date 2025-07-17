@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} - Mail Check {% endblock %}
+
+{% load static %}
+{% block style %} {% static 'css/mail-check.css' %} {% endblock %}
+
+{% block content %}
+<div class="message-container">
+    <div class="message-container--header">  
+        <img src="{% static 'img/mail-check.png' %}">
+        <h2>Correo enviado exitosamente</h2>
+    </div>
+    <p>Hemos recibido su correo electrónico con la información proporcionada. Nos pondremos en contacto con usted a la brevedad posible.</p>
+</div>
+
+{% endblock %}

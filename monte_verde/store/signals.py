@@ -5,7 +5,7 @@ from store.models import Product
 
 @receiver(pre_delete, sender=Product)
 def delete_img_s3(sender, instance, **kwargs):
-    if instance.imagen:
+    if instance.image:
         imagen_url = instance.image.name 
 
         try:

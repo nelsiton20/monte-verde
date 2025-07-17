@@ -8,12 +8,13 @@
         </div>
         <div class="form">
             <p>¿Buscas los mejores productos y especialistas en áreas verdes?</p>
-            <form>
-                <input placeholder="nombre">
-                <input placeholder="telefono">
-                <input placeholder="Servicio a solicitar">
-                <textarea placeholder="Déjanos un mensaje"></textarea>
-                <button>Enviar</button>
+            <form method="post">
+                {% csrf_token %}
+                <input placeholder="nombre" name="name">
+                <input placeholder="telefono" name="phone">
+                <input placeholder="Servicio a solicitar" name="service">
+                <textarea placeholder="Déjanos un mensaje" name="message"></textarea>
+                <button type="submit">Enviar</button>
             </form>
         </div>
     </div>
