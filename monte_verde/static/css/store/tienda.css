@@ -94,10 +94,20 @@ body{
     width: 230px;
     max-height: 300px;
     border-radius: 8px;
+    overflow-y: auto;
     
     & a{
         color: #303030;
     }
+}
+
+.categories-container::-webkit-scrollbar {
+    width: 4px; 
+}
+
+.categories-container::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 10px; 
 }
 
 .categories-container.show{

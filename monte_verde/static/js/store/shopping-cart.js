@@ -77,7 +77,8 @@ function addPriceOfProducts(totalPrice){
 
 // función de envío de mensaje
 function sendMessage(data){
-    const telefono = "51924421097";
+    const number = document.getElementById('number').value;
+    const telefono = `51${number}`;
     const mensaje = data;
     const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
     window.open(url, '_blank');
@@ -179,6 +180,15 @@ function addOneToProduct(i){
     localStorage.setItem('shopping_cart', JSON.stringify(products));
 }
 
+// función para actualizar cantidad de productos del carrito
+function updateProductCount(count){
+    const cartValue = document.querySelectorAll('.shopping-cart--count');
+
+    cartValue.forEach(cart => {
+        cart.textContent = count;
+    })
+}
+
 function removeOneToProduct(i){
     const products = JSON.parse(localStorage.getItem('shopping_cart'));
     const productSelected = products[i];
@@ -186,6 +196,7 @@ function removeOneToProduct(i){
     if(productSelected.count <= 1){
         products.splice(i, 1);
         localStorage.setItem('shopping_cart', JSON.stringify(products));
+        updateProductCount(products.length)
     } else {
         const newCount = parseInt(productSelected.count) - 1;
 

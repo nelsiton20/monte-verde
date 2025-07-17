@@ -75,9 +75,10 @@ function addProductToItem(product, price){
 function updateCountOfProducts(){
     const products = JSON.parse(localStorage.getItem('shopping_cart'));
     const count = document.querySelectorAll('.shopping-cart--count');
+    const value = products.length <= 9 ? products.length : '+9';
 
     count.forEach(c => {
-        c.textContent = products.length;
+        c.textContent = value;
     })
 }
 

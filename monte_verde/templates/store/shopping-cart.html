@@ -31,6 +31,8 @@
             <button><a href="{% url 'store' %}">Ir a la tienda</a></button>
         </article>
     </section>
+
+    <input type="hidden" value="{{ number }}" id="number">
 {% endblock %}
 
 {% block srcJS %} {% static 'js/store/shopping-cart.js' %} {% endblock %}

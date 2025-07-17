@@ -7,6 +7,10 @@
     --subrayado: #F39F1A;
 }
 
+h1, h2, p{
+    margin: 0;
+}
+
 /* PRODUCT-SERVICES MAIN CONTAINER */
 .main-products-services-container{
     padding: 80px 20px;
@@ -54,7 +58,7 @@
 }
 
 .services-container--service-container:hover{
-    box-shadow: 0 0 40px var(--filter), 0 0 50px var(--filter);
+    box-shadow: 0 0 40px var(--verde-menta), 0 0 50px var(--verde-menta);
     transition: box-shadow .1s ease;
 }
 
@@ -307,15 +311,60 @@
 
 /* ------------ END QUOTE CONTAINER -----------*/
 
+
+/* MENSAJE DE ENVÍO DE CORREO */
+.message-container{
+    position: fixed;
+    top: 80px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    transition: opacity .4s ease-out;
+}
+
+.message-container.hide{
+    opacity: 0;
+}
+
+.message-container--content-container{
+    width: auto;
+    padding: 10px;
+    border-radius: 14px;
+    margin: 0 20px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    & p{
+        color: #fff;
+        font-weight: bold;
+        font-size: 0.90rem;
+    }
+
+    & img:hover{
+        cursor: pointer;
+    }
+}
+
+.message-container--content-container.success{
+    background-color: var(--verde-menta);
+}
+
+.message-container--content-container.error{
+    background-color: #f00;
+}
+
+/* -------------------------- */
+
 /* --------------- MEDIA QUERIES -------------- */
 @media (max-width: 1000px){
     /*.services-container{
         width: 100%;
-    }
+    }*/
 
     .form-container{
-        width: 100%;
-    }*/
+        width: 95%;
+    }
 
     .main-products-services-container--title, .quote--title{
         font-size: 2.2rem;

@@ -4,6 +4,7 @@
     --verde-menta: #20ac25;
     --text-color: #555;
     --light-grey: #f7f7f7;
+    --subrayado: #F39F1A;
 }
 
 /* ----------- TITLE CONTAINER --------- */
@@ -40,7 +41,7 @@
 
     & span{
         font-size: 2.25rem;
-        color: #abff00;
+        color: #20ac25;
         font-weight: bolder;
     }
 }
@@ -347,7 +348,7 @@
 
 .contact-article--title{
     font-size: 2.8rem;
-    color: var(--verde-menta);
+    color: var(--verde-bosque);
     margin-bottom: 30px;
 }
 
@@ -356,7 +357,7 @@
     display: block;
     width: 100px;
     height: 3px;
-    background-color: var(--verde-menta);
+    background-color: var(--subrayado);
     margin: 0 auto;
     margin-top: 10px;
     border-radius: 20px;

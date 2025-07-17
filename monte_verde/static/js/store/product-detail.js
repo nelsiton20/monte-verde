@@ -50,9 +50,10 @@ function showProductAddedNotification(){
 // función para actualizar cantidad de productos en el ícono del carrito
 function updateCountShoppingCart(){
     const span = document.querySelectorAll('.shopping-cart--count');
-    const count = JSON.parse(localStorage.getItem('shopping_cart')).length;
+    const count = JSON.parse(localStorage.getItem('shopping_cart'));
+    const value = count.length <= 9 ? count.length : '+9';
 
     span.forEach(s => {
-        s.textContent = count;
+        s.textContent = value;
     })
 }

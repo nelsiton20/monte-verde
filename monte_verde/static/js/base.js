@@ -33,7 +33,7 @@ if(localStorage.getItem('shopping_cart')){
     const span = document.querySelectorAll('.shopping-cart--count');
 
     const products = JSON.parse(localStorage.getItem('shopping_cart'));
-    const count = products.length;
+    const count = (products.length <= 9 ) ? products.length : '+9';
 
     span.forEach(s => {
         s.textContent = count;

@@ -9,10 +9,10 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='home'),
-    path('services/', views.services_view, name='services'),
     path('store/', include('store.urls')),
     path('about-us/', views.us_view, name='about_us'),
-    path('mail-check/', views.mail_check, name='mail_check')
+    path('mail-check/', views.mail_check, name='mail_check'),
+    path('services/', include('services.urls'))
 ]
 
 if settings.DEBUG:

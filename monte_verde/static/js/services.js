@@ -8,9 +8,22 @@ for(let i=0; i<buttons.length; i++){
 }
 
 function sendMessageToWhatsApp(service){
-    const telefono = "51924421097"
+    const number = document.getElementById('number').value;
+    const telefono = `51${number}`
     const mensaje = `Hola, quisiera más información acerca del servicio: ${service}`
     const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
     window.open(url, '_blank');
 }
 
+if(document.querySelector('.message-container')){
+    const message = document.querySelector('.message-container');
+    const x = document.querySelector('.message-container--img');
+
+    x.addEventListener('click', () => {
+        message.classList.add('hide');
+    })
+
+    setTimeout(() => {
+        message.classList.add('hide');
+    }, 5000)
+}
