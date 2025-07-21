@@ -15,3 +15,6 @@ def us_view(request):
 
 def mail_check(request):
     return render(request, 'mail-check.html')
+
+def projects(request):
+    return render(request, 'projects.html')

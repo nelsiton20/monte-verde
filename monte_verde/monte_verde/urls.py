@@ -11,8 +11,8 @@ urlpatterns = [
     path('', views.index, name='home'),
     path('store/', include('store.urls')),
     path('about-us/', views.us_view, name='about_us'),
-    path('mail-check/', views.mail_check, name='mail_check'),
-    path('services/', include('services.urls'))
+    path('services/', include('services.urls')),
+    path('projects/', views.projects, name='projects')
 ]
 
 if settings.DEBUG:

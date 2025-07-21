@@ -10,16 +10,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Monte verde {% block title %}{% endblock %}</title>
+    <meta charset="UTF-8">
+    <title>Vivero Monte Verde {% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href={% block style %} {% endblock %}>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="{% block description %}{% endblock %}">
 </head>
 <body>
     <header class="header">
         <div class="header--logo">
-            <img src="{% static 'img/logo.png' %}">
+            <img src="{% static 'img/logo.png' %}" alt="Vivero Monte Verde">
         </div>
         <div class="background-navbar"></div>
         <nav class="header--nav">
@@ -49,7 +51,7 @@
                     </a>
                 </div>
                 <div class="nav-list--item-container">
-                    <a href="#" class="nav-list--item-container--link">
+                    <a href="{% url 'projects' %}" class="nav-list--item-container--link">
                         <span class="nav-list--item-container-icon"><img src="{% static 'img/nav-icons/project.png' %}"></span>
                         <li>Proyectos</li>
                     </a>
@@ -90,7 +92,7 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-section about">
-                <h3 class="footer-section--title">Vivero Monte Verde</h3>
+                <h3 class="footer-section--title"><strong>Vivero Monte Verde</strong></h3>
                 <p>Amor por las plantas, pasión por tu jardín.</p>
             </div>
             <div class="footer-section links">
@@ -100,14 +102,9 @@
                     <li><a href="{% url 'about_us' %}" class="links-ul--item">Nosotros</a></li>
                     <li><a href="{% url 'store' %}" class="links-ul--item">Tienda</a></li>
                     <li><a href="{% url 'services' %}" class="links-ul--item">Servicios</a></li>
-                    <li><a href="#" class="links-ul--item">Proyectos</a></li>
+                    <li><a href="{% url 'projects' %}" class="links-ul--item">Proyectos</a></li>
                 </ul>
             </div>
-            <!--<div class="footer-section contact">
-                <h4 class="footer-section--title">Contacto</h4>
-                <p>✉️ contacto@monteverde.com</p>
-                <p>📞 (colocar teléfono)</p>
-            </div>-->
             <div class="footer-section social">
                 <h4 class="footer-section--title">Síguenos</h4>
                 <a href="#" class="social--item"><img src="{% static 'img/footer-icons/facebook.png' %}" alt="Facebook"></a>

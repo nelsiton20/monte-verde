@@ -36,29 +36,13 @@ h1, h2, h3{
     padding: 20px 60px;
     height: 60px;
     position: sticky;
-    /*position: fixed;*/ 
-    /*background-color: transparent;*/
     top: 0;
     width: 100%;
     z-index: 10;
     gap: 30px;
     box-shadow: 0 1px 8px #0005;
     background-color: #fff;
-    /*transition: background-color 0.4s ease, padding 0.4s ease;
-
-    & .nav-list--item-container--link{
-        color: #fff;
-    }*/
 }
-
-/*.header.scrolled{
-    background-color: #fff;
-    padding: 10px 30px;
-
-    & .nav-list--item-container--link{
-        color: var(--gris-oscuro);
-    }
-}*/
 
 .header--logo{
     & img{
@@ -74,7 +58,7 @@ h1, h2, h3{
         margin: 3px 0;
         width: 30px;
         height: 4px;
-        background-color: #000;
+        background-color: var(--gris-oscuro);
     }
 }
 
@@ -141,13 +125,13 @@ h1, h2, h3{
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 20px;
-            width: 20px;
+            height: 22px;
+            width: 22px;
             border-radius: 50%;
             padding: 1px;
             position: absolute;
-            top: -7px;
-            right: -5px;
+            top: -8px;
+            right: -7px;
             font-size: 0.9rem;
         }
 }
@@ -195,6 +179,10 @@ h1, h2, h3{
     font-size: 1rem;
     font-weight: bold;
     margin-bottom: 16px;
+
+    & strong{
+        font-weight: bold;
+    }
 }
 
 .about{

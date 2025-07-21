@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title %}| Proyectos {% endblock %}
+
+{% block description %}
+Entérate de algunos de los proyectos realizados por el equipo Vivero Monte Verde. Nos esforzamos por embellecer la ciudad con áreas verdes.
+{% endblock %}
+
+{% load static %}
+{% block style %} {% static 'css/projects.css' %} {% endblock %}
+
+{% block content %}
+<section class="projects-container">
+    <article class="projects-container--item-container">
+        <div class="projects-container--item-container--info-container">
+            <h2>Instalación de Árboles Ornamentales</h2>
+            <p>Transformación de espacios mediante la colocación de árboles ornamentales de gran tamaño. Este proyecto se enfoca en la selección precisa de especies que brindan belleza, frescura y armonía, mejorando significativamente el entorno.</p>
+        </div>
+        <div class="projects-container--item-container--media-container">
+            <video src="{% static 'img/projects/proj1/media1.mp4' %}" class="media p1-med" autoplay muted loop></video>
+            <video src="{% static 'img/projects/proj1/media2.mp4' %}" class="media p1-med" autoplay muted loop></video>
+            <video src="{% static 'img/projects/proj1/media3.mp4' %}" class="media p1-med" autoplay muted loop></video>
+            <img src="{% static 'img/projects/proj1/media4.jpeg' %}" class="media p1-med">
+            <img src="{% static 'img/projects/proj1/media5.jpeg' %}" class="media p1-med">
+            <video src="{% static 'img/projects/proj1/media6.mp4' %}" class="media p1-med" autoplay muted loop></video>
+            <button class="back back-p1"><</button>
+            <button class="next next-p1">></button>
+        </div>
+    </article>
+    <div class="projects-container--separation"></div>
+    <article class="projects-container--item-container">
+        <div class="projects-container--item-container--info-container">
+            <h2>Plantación y Diseño de Áreas Verdes</h2>
+            <p>Creación de espacios verdes a través de la plantación estratégica de árboles y plantas pequeñas, diseñados para mejorar la estética y la biodiversidad del entorno. Este proyecto transforma grandes áreas de tierra en jardines vibrantes, aportando frescura y vida al paisaje.</p>
+        </div>
+        <div class="projects-container--item-container--media-container">
+            <video src="{% static 'img/projects/proj2/media1.mp4' %}" class="media p2-med" autoplay muted loop></video>
+            <video src="{% static 'img/projects/proj2/media2.mp4' %}" class="media p2-med" autoplay muted loop></video>
+            <img src="{% static 'img/projects/proj2/media3.jpeg' %}" class="media p2-med">
+            <img src="{% static 'img/projects/proj2/media4.jpeg' %}" class="media p2-med">
+            <video src="{% static 'img/projects/proj2/media5.mp4' %}" class="media p2-med" autoplay muted loop></video>
+            <button class="back back-p2"><</button>
+            <button class="next next-p2">></button>
+        </div>
+    </article>
+    <div class="projects-container--separation"></div>
+    <article class="projects-container--item-container">
+        <div class="projects-container--item-container--info-container">
+            <h2>Rehabilitación de Áreas Verdes</h2>
+            <p>Mediante la siembra de césped, se rehabilitan áreas verdes, creando espacios frescos y saludables. Este proceso revitaliza el entorno, logrando un césped denso y vibrante que embellece cualquier área exterior, mejorando su calidad y funcionalidad.</p>
+        </div>
+        <div class="projects-container--item-container--media-container">
+            <img src="{% static 'img/projects/proj3/media1.jpeg' %}" class="media p3-med">
+            <video src="{% static 'img/projects/proj3/media2.mp4' %}" class="media p3-med" autoplay muted loop></video>
+            <img src="{% static 'img/projects/proj3/media3.jpeg' %}" class="media p3-med">
+            <img src="{% static 'img/projects/proj3/media4.jpeg' %}" class="media p3-med">
+            <img src="{% static 'img/projects/proj3/media5.jpeg' %}" class="media p3-med">
+            <img src="{% static 'img/projects/proj3/media6.jpeg' %}" class="media p3-med">
+            <img src="{% static 'img/projects/proj3/media7.jpeg' %}" class="media p3-med">
+            <img src="{% static 'img/projects/proj3/media8.jpeg' %}" class="media p3-med">
+            <button class="back back-p3"><</button>
+            <button class="next next-p3">></button>
+        </div>
+    </article>
+</section>
+{% endblock %}
+
+{% block srcJS %} {% static 'js/projects.js' %} {% endblock %}

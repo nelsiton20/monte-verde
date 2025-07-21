@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 
-{% block title %} - Servicios {% endblock %}
+{% block title %}| Servicios {% endblock %}
+
+{% block description %}
+Ofrecemos servicios especializados en áreas verdes, incluyendo mantenimiento de jardines, diseño de paisajes y asesoría en cuidado de plantas. ¡Haz crecer tu jardín con nuestros expertos!
+{% endblock %}
 
 {% load static %}
 {% block style %} {% static 'css/services.css' %} {% endblock %}
@@ -10,106 +14,47 @@
         <h2 class="main-products-services-container--title">Nuestros servicios profesionales</h2>
         <div class="services-container">
             <div class="services-container--service-container">
-                <div class="service-container--img-container"><img src="{% static 'img/servicio1.jpeg' %}"></div>
+                <div class="service-container--img-container"><img src="{% static 'img/services/jardin.jpg' %}" alt="Diseño de jardines"></div>
                 <div class="service-container--info-container">
                     <div class="service-container--info-container--title-container">
                         <h3 class="title-container--content">Diseño de Jardines</h3>
                     </div>
-                    <p>Servicio especializado de instalación y plantado de grass americano, ideal para jardines residenciales, áreas recreativas, parques y espacios públicos.</p>
+                    <p>Transformamos tu espacio exterior en un lugar único con diseños personalizados que combinan estética y funcionalidad para tu jardín, terraza o espacio verde.</p>
                     <button class="service-container--info-container--button">Contratar</button>
                 </div class="service-container--info-container">
             </div>
             <div class="services-container--service-container">
-                <div class="service-container--img-container"><img src="{% static 'img/servicio1.jpeg' %}"></div>
+                <div class="service-container--img-container"><img src="{% static 'img/services/mantenimiento.jpg' %}" alt="Mantenimiento de áreas verdes"></div>
                 <div class="service-container--info-container">
                     <div class="service-container--info-container--title-container">
                         <h3 class="title-container--content">Mantenimiento de Áreas Verdes</h3>
                     </div>
-                    <p>Servicio especializado de instalación y plantado de grass americano, ideal para jardines residenciales, áreas recreativas, parques y espacios públicos.</p>
+                    <p>Realizamos mantenimiento de jardines y áreas verdes, garantizando su cuidado, salud y belleza a lo largo del año con servicios profesionales y especializados.</p>
                     <button class="service-container--info-container--button">Contratar</button>
                 </div>
             </div>
             <div class="services-container--service-container">
-                <div class="service-container--img-container"><img src="{% static 'img/servicio1.jpeg' %}"></div>
+                <div class="service-container--img-container"><img src="{% static 'img/services/riego.jpg' %}" alt="Instalación de riego"></div>
                 <div class="service-container--info-container">
                     <div class="service-container--info-container--title-container">
                         <h3 class="title-container--content">Instalación de Riego</h3>
                     </div>
-                    <p>Servicio especializado de instalación y plantado de grass americano, ideal para jardines residenciales, áreas recreativas, parques y espacios públicos.</p>
+                    <p>Instalamos sistemas de riego eficientes y automatizados que optimizan el consumo de agua y mantienen tus plantas y césped siempre verdes y saludables.</p>
                     <button class="service-container--info-container--button">Contratar</button>
                 </div>
             </div>
             <div class="services-container--service-container">
-                <div class="service-container--img-container"><img src="{% static 'img/servicio1.jpeg' %}"></div>
+                <div class="service-container--img-container"><img src="{% static 'img/services/paisajismo.jpeg' %}" alt="Asesoría en paisajismo"></div>
                 <div class="service-container--info-container">
                     <div class="service-container--info-container--title-container">
                         <h3 class="title-container--content">Asesoría en Paisajismo</h3>
                     </div>
-                    <p>Servicio especializado de instalación y plantado de grass americano, ideal para jardines residenciales, áreas recreativas, parques y espacios públicos.</p>
+                    <p>Ofrecemos asesoría experta en paisajismo para crear espacios exteriores que reflejen tus gustos, maximizando el diseño y la funcionalidad de tu jardín o área verde.</p>
                     <button class="service-container--info-container--button">Contratar</button>
                 </div>
             </div>
         </div>
     </section>
-    <!--<h1>Servicios</h1>
-    <main class="services-container">
-        <div class="services--item">
-            <div class="services--info">
-                <div class="info--image-container">
-                    <img src="{% static 'img/servicio1.jpeg' %}">
-                </div>
-                <div class="info--description">
-                    <h2 class="description--title">Servicio 1</h2>
-                    <p class="description--content">Servicio especializado de instalación y plantado de grass americano, ideal para jardines residenciales, áreas recreativas, parques y espacios públicos.</p>
-                </div>
-            </div>
-            <div class="services--button-container">
-                <button class="button">Contratar</button>
-            </div>
-        </div>
-        <div class="services--item">
-            <div class="services--info">
-                <div class="info--image-container">
-                    <img src="{% static 'img/servicio1.jpeg' %}">
-                </div>
-                <div class="info--description">
-                    <h2 class="description--title">Servicio 2</h2>
-                    <p class="description--content">Servicio especializado de instalación y plantado de grass americano, ideal para jardines residenciales, áreas recreativas, parques y espacios públicos.</p>
-                </div>
-            </div>
-            <div class="services--button-container">
-                <button class="button">Contratar</button>
-            </div>
-        </div>
-        <div class="services--item">
-            <div class="services--info">
-                <div class="info--image-container">
-                    <img src="{% static 'img/servicio1.jpeg' %}">
-                </div>
-                <div class="info--description">
-                    <h2 class="description--title">Servicio 3</h2>
-                    <p class="description--content">Servicio especializado de instalación y plantado de grass americano, ideal para jardines residenciales, áreas recreativas, parques y espacios públicos.</p>
-                </div>
-            </div>
-            <div class="services--button-container">
-                <button class="button">Contratar</button>
-            </div>
-        </div>
-        <div class="services--item">
-            <div class="services--info">
-                <div class="info--image-container">
-                    <img src="{% static 'img/servicio1.jpeg' %}">
-                </div>
-                <div class="info--description">
-                    <h2 class="description--title">Servicio 4</h2>
-                    <p class="description--content">Servicio especializado de instalación y plantado de grass americano, ideal para jardines residenciales, áreas recreativas, parques y espacios públicos.</p>
-                </div>
-            </div>
-            <div class="services--button-container">
-                <button class="button">Contratar</button>
-            </div>
-        </div>
-    </main>-->
 
     {% include 'snippets/form.html' %}
 

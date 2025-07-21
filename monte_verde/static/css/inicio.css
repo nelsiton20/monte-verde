@@ -192,7 +192,7 @@
     flex: 1;
 
     & p{
-        font-size: 1rem;
+        font-size: 0.95rem;
         color: var(--text-color);
     }
 
@@ -215,14 +215,14 @@
 }
 
 .service-container--info-container--title-container{
-    height: 50px;
+    height: 45px;
     display: flex;
     align-items: center;
 }
 
 .title-container--content{
     font-size: 1.5rem;
-    color: var(--verde-menta);
+    color: var(--verde-bosque);
 }
 
 /* ---------------------------- */

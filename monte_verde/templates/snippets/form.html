@@ -4,16 +4,16 @@
     <h2 class="quote--title">Cotiza con nosotros</h2>
     <div class="form-container">
         <div class="form--image-container">
-            <img src="{% static 'img/form.jpeg' %}">
+            <img src="{% static 'img/services/contact-form.PNG' %}">
         </div>
         <div class="form">
             <p>¿Buscas los mejores productos y especialistas en áreas verdes?</p>
             <form method="post">
                 {% csrf_token %}
-                <input placeholder="nombre" name="name">
-                <input placeholder="telefono" name="phone">
-                <input placeholder="Servicio a solicitar" name="service">
-                <textarea placeholder="Déjanos un mensaje" name="message"></textarea>
+                <input placeholder="nombre" name="name" required>
+                <input placeholder="telefono" name="phone" required>
+                <input placeholder="Servicio a solicitar" name="service required">
+                <textarea placeholder="Déjanos un mensaje" name="message" required></textarea>
                 <button type="submit">Enviar</button>
             </form>
         </div>

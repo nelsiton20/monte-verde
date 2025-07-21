@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
+
+{% block description %}
+En Vivero Monte Verde, encontrarás todo lo necesario para el cuidado y embellecimiento de tu jardín. Ofrecemos productos de jardinería de alta calidad y servicios profesionales de paisajismo para transformar tu espacio exterior con el mejor cuidado. 
+{% endblock %}
+
 {% load static %}
 {% block style %} {% static 'css/inicio.css' %} {% endblock %}
 
@@ -9,7 +14,7 @@
         </div>
     </div>
     <section class="main-products-services-container products-main-container">
-        <h2 class="main-products-services-container--title">Nuestros Productos Estrella</h2>
+        <h2 class="main-products-services-container--title">Nuestros productos estrella</h2>
         <div class="main-products-services-container--grid-container">
             <div class="grid-container--item-container">
                 <img src="{% static 'img/producto1.jpg' %}">
@@ -41,66 +46,47 @@
         <h2 class="main-products-services-container--title">Nuestros servicios profesionales</h2>
         <div class="services-container">
             <div class="services-container--service-container">
-                <div class="service-container--img-container"><img src="{% static 'img/servicio1.jpeg' %}"></div>
+                <div class="service-container--img-container"><img src="{% static 'img/services/jardin.jpg' %}" alt="Diseño de jardines"></div>
                 <div class="service-container--info-container">
                     <div class="service-container--info-container--title-container">
                         <h3 class="title-container--content">Diseño de Jardines</h3>
                     </div>
-                    <p>Servicio especializado de instalación y plantado de grass americano, ideal para jardines residenciales, áreas recreativas, parques y espacios públicos.</p>
+                    <p>Transformamos tu espacio exterior en un lugar único con diseños personalizados que combinan estética y funcionalidad para tu jardín, terraza o espacio verde.</p>
                     <button class="service-container--info-container--button">Contratar</button>
                 </div class="service-container--info-container">
             </div>
             <div class="services-container--service-container">
-                <div class="service-container--img-container"><img src="{% static 'img/servicio1.jpeg' %}"></div>
+                <div class="service-container--img-container"><img src="{% static 'img/services/mantenimiento.jpg' %}" alt="Mantenimiento de áreas verdes"></div>
                 <div class="service-container--info-container">
                     <div class="service-container--info-container--title-container">
                         <h3 class="title-container--content">Mantenimiento de Áreas Verdes</h3>
                     </div>
-                    <p>Servicio especializado de instalación y plantado de grass americano, ideal para jardines residenciales, áreas recreativas, parques y espacios públicos.</p>
+                    <p>Realizamos mantenimiento de jardines y áreas verdes, garantizando su cuidado, salud y belleza a lo largo del año con servicios profesionales y especializados.</p>
                     <button class="service-container--info-container--button">Contratar</button>
                 </div>
             </div>
             <div class="services-container--service-container">
-                <div class="service-container--img-container"><img src="{% static 'img/servicio1.jpeg' %}"></div>
+                <div class="service-container--img-container"><img src="{% static 'img/services/riego.jpg' %}" alt="Instalación de riego"></div>
                 <div class="service-container--info-container">
                     <div class="service-container--info-container--title-container">
                         <h3 class="title-container--content">Instalación de Riego</h3>
                     </div>
-                    <p>Servicio especializado de instalación y plantado de grass americano, ideal para jardines residenciales, áreas recreativas, parques y espacios públicos.</p>
+                    <p>Instalamos sistemas de riego eficientes y automatizados que optimizan el consumo de agua y mantienen tus plantas y césped siempre verdes y saludables.</p>
                     <button class="service-container--info-container--button">Contratar</button>
                 </div>
             </div>
             <div class="services-container--service-container">
-                <div class="service-container--img-container"><img src="{% static 'img/servicio1.jpeg' %}"></div>
+                <div class="service-container--img-container"><img src="{% static 'img/services/paisajismo.jpeg' %}" alt="Asesoría en paisajismo"></div>
                 <div class="service-container--info-container">
                     <div class="service-container--info-container--title-container">
                         <h3 class="title-container--content">Asesoría en Paisajismo</h3>
                     </div>
-                    <p>Servicio especializado de instalación y plantado de grass americano, ideal para jardines residenciales, áreas recreativas, parques y espacios públicos.</p>
+                    <p>Ofrecemos asesoría experta en paisajismo para crear espacios exteriores que reflejen tus gustos, maximizando el diseño y la funcionalidad de tu jardín o área verde.</p>
                     <button class="service-container--info-container--button">Contratar</button>
                 </div>
             </div>
         </div>
     </section>
-    <!--<section class="quote-container">
-        <h2 class="quote--title">Cotiza con nosotros</h2>
-        <div class="form-container">
-            <div class="form--image-container">
-                <img src="{% static 'img/form.jpeg' %}">
-            </div>
-            <div class="form">
-                <p>¿Buscas los mejores productos y especialistas en áreas verdes?</p>
-                <form method="POST">
-                    {% csrf_token %}
-                    <input placeholder="nombre" name="name">
-                    <input placeholder="telefono" name="phone">
-                    <input placeholder="Servicio a solicitar" name="service">
-                    <textarea placeholder="Déjanos un mensaje" class="message"></textarea>
-                    <button>Enviar</button>
-                </form>
-            </div>
-        </div>
-    </section>-->
     <section class="contact-section">
         <article class="contact-article">
             <h2 class="contact-article--title">Contáctanos</h2>
