@@ -234,6 +234,16 @@ h1, h2, h3{
 
 /* MEDIA QUERIES */
 @media (max-width: 1000px){
+    
+
+    .footer-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, auto));
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 900px){
     .header--menu{
         display: block;
     }
@@ -284,12 +294,6 @@ h1, h2, h3{
 
     body.no-scroll {
         overflow: hidden;
-    }
-
-    .footer-container{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(120px, auto));
-        justify-content: space-between;
     }
 }
 
