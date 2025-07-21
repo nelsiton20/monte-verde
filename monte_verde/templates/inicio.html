@@ -16,30 +16,16 @@ En Vivero Monte Verde, encontrarás todo lo necesario para el cuidado y embellec
     <section class="main-products-services-container products-main-container">
         <h2 class="main-products-services-container--title">Nuestros productos estrella</h2>
         <div class="main-products-services-container--grid-container">
+            {% for p in featured_products %}
             <div class="grid-container--item-container">
-                <img src="{% static 'img/producto1.jpg' %}">
+                <img src="{{ p.product.image.url }}">
                 <div class="grid-container--item-container--title-container">
-                    <h3>Monstera Deliciosa</h3>
+                    <h3>{{ p.product.name }}</h3>
                 </div>
-                <p>Perfecta para interiores, fácil de cuidar y con hojas impresionante</p>
-                <a>Ver detalles</a>
+                <p>{{ p.content }}</p>
+                <a href="{% url 'product-detail' p.product.slug %}">Ver detalles</a>
             </div>
-            <div class="grid-container--item-container">
-                <img src="{% static 'img/producto1.jpg' %}">
-                <div class="grid-container--item-container--title-container">
-                    <h3>Suculentas Variadas</h3>
-                </div>
-                <p>Ideales para principiantes y para dar un toque moderno a tu espacio</p>
-                <a>Ver detalles</a>
-            </div>
-            <div class="grid-container--item-container">
-                <img src="{% static 'img/producto1.jpg' %}">
-                <div class="grid-container--item-container--title-container">
-                    <h3>Orquídeas Phalaenopsis</h3>
-                </div>
-                <p>Elegantes y coloridas, añaden un toque de sofisticación a cualquier hogar</p>
-                <a>Ver detalles</a>
-            </div>
+            {% endfor %}
         </div>
     </section>
     <section class="main-products-services-container">
