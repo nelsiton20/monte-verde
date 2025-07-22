@@ -18,3 +18,6 @@ def mail_check(request):
 
 def projects(request):
     return render(request, 'projects.html')
+
+def custom_page_not_found(request, exception=None):
+    return render(request, '404.html', status=404)

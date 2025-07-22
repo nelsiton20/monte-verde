@@ -1,0 +1,56 @@
+:root{
+    --verde-bosque: #056124;
+    --gris-oscuro: #303030;
+    --verde-menta: #20ac25;
+    --text-color: #555;
+}
+
+.redirect-container{
+    padding: 100px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.redirect--title{
+    font-size: 2.5rem;
+    color: var(--verde-bosque);
+    font-weight: bold;
+}
+
+.redirect--content{
+    color: var(--gris-oscuro);
+    font-size: 1.25rem;
+}
+
+.redirect--button{
+    display: block;
+    border-radius: 8px;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    background-color: var(--verde-bosque);
+    font-weight: bold;
+    transition: background-color .3s ease;
+    color: #fff;
+    text-decoration: none;
+}
+
+.redirect--button:hover{
+    cursor: pointer;
+    background-color: var(--verde-menta);
+}
+
+@media (max-width: 1000px){
+    .redirect--title{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 500px){
+    .redirect--title{
+        font-size: 1.8rem;
+    }
+}

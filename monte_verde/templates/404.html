@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block style %} {% static 'css/404.css' %} {% endblock %}
+
+{% block content %}
+<div class="redirect-container">
+    <p class="redirect--title">Esta página no existe</p>
+    <p class="redirect--content">No te preocupes, haz click 👇🏽 y te llevaremos a la página de inicio.</p>
+    <a class="redirect--button" href="{% url 'home' %}">Ir a inicio</a>
+</div>
+{% endblock %}
