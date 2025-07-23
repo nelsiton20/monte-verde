@@ -58,19 +58,19 @@ Ofrecemos servicios especializados en áreas verdes, incluyendo mantenimiento de
 
     {% include 'snippets/form.html' %}
 
-    {% if messages %}
     <div class="message-container">
-        {% for message in messages %}
-        <div class="message-container--content-container {% if message.tags %}{{ message.tags }}{% endif %}">
-            <p>{{ message }}</p>
+        <div class="message-container--content-container">
+            <p id="content-container--text"></p>
             <img src="{% static 'img/x.png' %}" class="message-container--img">
         </div>
-        {% endfor %}
     </div>
-    {% endif %}
 
     <input type="hidden" value="{{ number }}" id="number">
     
 {% endblock %}
 
 {% block srcJS %} {% static 'js/services.js' %} {% endblock %}
+
+{% block codeJS %}
+    const serviceFormURL = "{% url 'services' %}";
+{% endblock %}

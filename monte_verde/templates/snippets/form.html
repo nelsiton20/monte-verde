@@ -1,6 +1,6 @@
 {% load static %}
 
-<section class="quote-container">
+<section class="quote-container" id="service-form">
     <h2 class="quote--title">Cotiza con nosotros</h2>
     <div class="form-container">
         <div class="form--image-container">
@@ -12,7 +12,7 @@
                 {% csrf_token %}
                 <input placeholder="nombre" name="name" required>
                 <input placeholder="telefono" name="phone" required>
-                <input placeholder="Servicio a solicitar" name="service required">
+                <input placeholder="Servicio a solicitar" name="service" required>
                 <textarea placeholder="Déjanos un mensaje" name="message" required></textarea>
                 <button type="submit">Enviar</button>
             </form>

@@ -115,5 +115,9 @@
 
 <script src="{% static 'js/base.js' %}"></script>
 <script src={% block srcJS %} {% endblock %}></script>
+<script>
+    {% block codeJS %}
+    {% endblock %}
+</script>
 </body>
 </html>
