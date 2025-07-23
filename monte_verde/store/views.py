@@ -1,6 +1,7 @@
 from django.shortcuts import get_object_or_404, render
 
 from .models import Product, Category
+from services.models import PhoneNumber
 
 # Create your views here.
 def store(request):
@@ -37,7 +38,9 @@ def search(request):
     })
 
 def shopping_cart(request):
-    return render(request, 'store/shopping-cart.html')
+    number = PhoneNumber.objects.all().order_by('-id').first()
+
+    return render(request, 'store/shopping-cart.html', { 'number': number })
 
 def product_detail(request, slug):
     product = get_object_or_404(Product, slug=slug)

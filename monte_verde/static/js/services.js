@@ -10,7 +10,7 @@ for(let i=0; i<buttons.length; i++){
 function sendMessageToWhatsApp(service){
     const number = document.getElementById('number').value;
     const telefono = `51${number}`
-    const mensaje = `Hola, quisiera más información acerca del servicio: ${service}`
+    const mensaje = `Hola, me gustaría recibir más información sobre el servicio: ${service}. Quedo atento a su respuesta.`
     const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
     window.open(url, '_blank');
 }

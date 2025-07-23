@@ -379,6 +379,14 @@
         /*height: 70dvh;*/
     }
 
+    .title-container--content-container--title{
+        font-size: 1.5rem;
+
+        & span{
+            font-size: 1.75rem;
+        }
+    }
+
     /* CONTENEDOR DE PRODUCTOS */
     .grid-container--item-container{
         width: 340px;
@@ -472,6 +480,10 @@
     .title-container{
         height: calc(50dvh - 60px);
         /*height: 50vh;*/
+    }
+
+    .title-container--content-container{
+        padding: 12px;
     }
 
     .form-container{

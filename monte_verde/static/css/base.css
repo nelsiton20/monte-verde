@@ -45,6 +45,8 @@ h1, h2, h3{
 }
 
 .header--logo{
+    display: block;
+
     & img{
         width: 120px;
     }
@@ -310,5 +312,9 @@ h1, h2, h3{
     .header--nav{
         right: -100%;
         width: 90%;
+    }
+
+    .header{
+        padding: 20px;
     }
 }
