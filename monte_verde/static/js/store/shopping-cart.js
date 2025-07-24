@@ -59,7 +59,7 @@ function addProductsToShoppingCartSection(productList){
 function getPriceTotal(productList){
     let priceTotal = 0;
 
-    productList.forEach((p) => priceTotal += parseInt(p.price));
+    productList.forEach((p) => priceTotal += parseFloat(p.price));
     return priceTotal;
 }
 
