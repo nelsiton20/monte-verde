@@ -18,7 +18,7 @@ def services_view(request):
         subject = f'Quiero el servicio: {service}'
         message_body = f'Nombre: {name}\nNúmero: {phone}\n\n{message}'
         from_email = settings.DEFAULT_FROM_EMAIL 
-        recipient_list = ['nelsonrca2006@gmail.com']
+        recipient_list = ['ericka@viveromonteverde.com']
 
         try:
             send_mail(subject, message_body, from_email, recipient_list)

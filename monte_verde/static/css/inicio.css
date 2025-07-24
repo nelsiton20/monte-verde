@@ -346,6 +346,16 @@
     }
 }
 
+
+#contact-article--phone{
+    font-weight: inherit;
+}
+
+#contact-article--phone:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
 .contact-article--title{
     font-size: 2.8rem;
     color: var(--verde-bosque);

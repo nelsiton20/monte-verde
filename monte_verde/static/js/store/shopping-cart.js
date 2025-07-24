@@ -88,7 +88,7 @@ function sendMessage(data){
 function getDataForTheMessage(productList){
     let message = "Hola, esta es mi lista de productos seleccionados:";
 
-    productList.forEach((p, i) => message += `\n${i+1}. *${p.name}* - ${p.count} ${p.count > 1 ? 'unidades' : 'unidad'} - C/U (${p.price})`)
+    productList.forEach((p, i) => message += `\n${i+1}. *${p.name}* - ${p.count} ${p.count > 1 ? 'unidades' : 'unidad'} - C/U (S/${p.price})`)
 
     message += `\nTotal: S/${getPriceTotal(productList)}`;
     return message;
