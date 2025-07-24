@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
 
-{% block title %}| Tienda {% endblock %}
+{% block title %}Tienda | {% endblock %}
 
-{% block description %}
-Vivero Monte Verde ofrece una amplia gama de productos de jardinería, plantas y herramientas, ideales tanto para tu jardín como para proyectos de embellecimiento urbano.
-{% endblock %}
+{% block description %}Vivero Monte Verde ofrece una amplia gama de productos de jardinería, plantas y herramientas, ideales tanto para tu jardín como para proyectos de embellecimiento urbano.{% endblock %}
 
 {% load static %}
 {% block style %} {% static 'css/store/tienda.css' %} {% endblock %}
+
+{% block ogTitle %}Tienda de Vivero Monte Verde{% endblock %}
+{% block ogImage%}{% static 'img/logo.png' %}{% endblock %}
 
 {% block content %}
     <div class="base--form--container">

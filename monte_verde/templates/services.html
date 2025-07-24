@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
 
-{% block title %}| Servicios {% endblock %}
+{% block title %}Servicios | {% endblock %}
 
-{% block description %}
-Ofrecemos servicios especializados en áreas verdes, incluyendo mantenimiento de jardines, diseño de paisajes y asesoría en cuidado de plantas. ¡Haz crecer tu jardín con nuestros expertos!
-{% endblock %}
+{% block description %}Ofrecemos servicios especializados en áreas verdes, incluyendo mantenimiento de jardines, diseño de paisajes y asesoría en cuidado de plantas. ¡Haz crecer tu jardín con nuestros expertos!{% endblock %}
 
 {% load static %}
 {% block style %} {% static 'css/services.css' %} {% endblock %}
+
+{% block ogTitle %}Servicios de Vivero Monte Verde{% endblock %}
+{% block ogImage%}{% static 'img/logo.png' %}{% endblock %}
 
 {% block content %}
     <section class="main-products-services-container">
@@ -58,19 +59,19 @@ Ofrecemos servicios especializados en áreas verdes, incluyendo mantenimiento de
 
     {% include 'snippets/form.html' %}
 
-    {% if messages %}
     <div class="message-container">
-        {% for message in messages %}
-        <div class="message-container--content-container {% if message.tags %}{{ message.tags }}{% endif %}">
-            <p>{{ message }}</p>
+        <div class="message-container--content-container">
+            <p id="content-container--text"></p>
             <img src="{% static 'img/x.png' %}" class="message-container--img">
         </div>
-        {% endfor %}
     </div>
-    {% endif %}
 
     <input type="hidden" value="{{ number }}" id="number">
     
 {% endblock %}
 
 {% block srcJS %} {% static 'js/services.js' %} {% endblock %}
+
+{% block codeJS %}
+    const serviceFormURL = "{% url 'services' %}";
+{% endblock %}

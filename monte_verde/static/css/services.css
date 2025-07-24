@@ -193,6 +193,11 @@ h1, h2, p{
         & textarea{
             height: 100px;
             resize: none;
+            font-family: inherit;
+        }
+
+        & textarea::placeholder{
+            font-family: inherit;
         }
 
         & input:focus, textarea:focus{
@@ -229,10 +234,14 @@ h1, h2, p{
 .message-container{
     position: fixed;
     top: 80px;
-    display: flex;
+    display: none;
     justify-content: center;
     width: 100%;
     transition: opacity .4s ease-out;
+}
+
+.message-container.show{
+    display: flex;
 }
 
 .message-container.hide{

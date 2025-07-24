@@ -29,6 +29,10 @@ h2, h3, p{
         color: var(--text-color);
         margin-bottom: 12px;
         font-size: 1.12rem;
+
+        & strong{
+            font-weight: inherit;
+        }
     }
 }
 

@@ -26,7 +26,7 @@
     box-sizing: border-box;
     padding: 1rem;
     width: 40%;
-    margin-left: auto;
+    margin-right: auto;
     background-color: #1d5c3990;
     color: #fff;
     display: flex;
@@ -346,6 +346,16 @@
     }
 }
 
+
+#contact-article--phone{
+    font-weight: inherit;
+}
+
+#contact-article--phone:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
 .contact-article--title{
     font-size: 2.8rem;
     color: var(--verde-bosque);
@@ -377,6 +387,14 @@
     .title-container{
         height: calc(70dvh - 60px);
         /*height: 70dvh;*/
+    }
+
+    .title-container--content-container--title{
+        font-size: 1.5rem;
+
+        & span{
+            font-size: 1.75rem;
+        }
     }
 
     /* CONTENEDOR DE PRODUCTOS */
@@ -474,6 +492,10 @@
         /*height: 50vh;*/
     }
 
+    .title-container--content-container{
+        padding: 12px;
+    }
+
     .form-container{
         flex-direction: column;
     }
@@ -491,6 +513,18 @@
     }
     h2 {
         font-size: 1.6em;
+    }
+
+    .title-container--content-container{
+        padding: 6px;
+    }
+
+    .title-container--content-container--title{
+        font-size: 0.85rem;
+
+        & span{
+            font-size: 1rem;
+        }
     }
 
     .grid-container--item-container--title-container{

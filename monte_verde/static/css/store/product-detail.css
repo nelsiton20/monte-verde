@@ -9,7 +9,7 @@ body{
     background: linear-gradient(135deg, #f3f3f3, #e8f5ec);
 }
 
-h2, p{
+h1, p{
     margin: 0;
 }
 
@@ -41,7 +41,7 @@ h2, p{
     flex-direction: column;
     padding: 20px;
 
-    & h2{
+    & h1{
         margin: 10px 0;
         font-size: 1.5rem;
         color: var(--gris-oscuro);

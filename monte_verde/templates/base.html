@@ -11,19 +11,21 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Vivero Monte Verde {% block title %}{% endblock %}</title>
+    <title>{% block title %}{% endblock %}Vivero Monte Verde</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href={% block style %} {% endblock %}>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
     <meta name="description" content="{% block description %}{% endblock %}">
+    <meta property="og:title" content="{% block ogTitle %}{% endblock %}">
+    <meta property="og:image" content="{% block ogImage %}{% endblock %}">
     <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/x-icon">
 </head>
 <body>
     <header class="header">
-        <div class="header--logo">
+        <a class="header--logo" href="{% url 'home' %}">
             <img src="{% static 'img/logo.png' %}" alt="Vivero Monte Verde">
-        </div>
+        </a>
         <div class="background-navbar"></div>
         <nav class="header--nav">
             <ul class="nav-list">
@@ -108,8 +110,7 @@
             </div>
             <div class="footer-section social">
                 <h4 class="footer-section--title">Síguenos</h4>
-                <a href="#" class="social--item"><img src="{% static 'img/footer-icons/facebook.png' %}" alt="Facebook"></a>
-                <a href="#" class="social--item"><img src="{% static 'img/footer-icons/instagram.png' %}" alt="Instagram"></a>
+                <a href="https://www.facebook.com/share/1C3k9pqBhG/" class="social--item" target="_blank"><img src="{% static 'img/footer-icons/facebook.png' %}" alt="Facebook de Vivero Monte Verde"></a>
             </div>
         </div>
     </footer>

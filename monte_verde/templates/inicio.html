@@ -1,45 +1,32 @@
 {% extends 'base.html' %}
 
-{% block description %}
-En Vivero Monte Verde, encontrarás todo lo necesario para el cuidado y embellecimiento de tu jardín. Ofrecemos productos de jardinería de alta calidad y servicios profesionales de paisajismo para transformar tu espacio exterior con el mejor cuidado. 
-{% endblock %}
+{% block description %}En Vivero Monte Verde, encontrarás todo lo necesario para el cuidado y embellecimiento de tu jardín. Ofrecemos productos de jardinería de alta calidad y servicios profesionales de paisajismo para transformar tu espacio exterior con el mejor cuidado. {% endblock %}
 
 {% load static %}
 {% block style %} {% static 'css/inicio.css' %} {% endblock %}
 
+{% block ogTitle %}Vivero Monte Verde{% endblock%}
+{% block ogImage%}{% static 'img/logo.png' %}{% endblock %}
+
 {% block content %}
     <div class="title-container">
         <div class="title-container--content-container">
-            <h1 class="title-container--content-container--title"><span>CULTIVA</span> NATURALEZA RESPIRA <span>VIDA</span></h1>
+            <h2 class="title-container--content-container--title"><span>CULTIVA</span> NATURALEZA RESPIRA <span>VIDA</span></h2>
         </div>
     </div>
     <section class="main-products-services-container products-main-container">
         <h2 class="main-products-services-container--title">Nuestros productos estrella</h2>
         <div class="main-products-services-container--grid-container">
+            {% for p in featured_products %}
             <div class="grid-container--item-container">
-                <img src="{% static 'img/producto1.jpg' %}">
+                <img src="{{ p.product.image.url }}">
                 <div class="grid-container--item-container--title-container">
-                    <h3>Monstera Deliciosa</h3>
+                    <h3>{{ p.title }}</h3>
                 </div>
-                <p>Perfecta para interiores, fácil de cuidar y con hojas impresionante</p>
-                <a>Ver detalles</a>
+                <p>{{ p.content }}</p>
+                <a href="{% url 'product-detail' p.product.slug %}">Ver detalles</a>
             </div>
-            <div class="grid-container--item-container">
-                <img src="{% static 'img/producto1.jpg' %}">
-                <div class="grid-container--item-container--title-container">
-                    <h3>Suculentas Variadas</h3>
-                </div>
-                <p>Ideales para principiantes y para dar un toque moderno a tu espacio</p>
-                <a>Ver detalles</a>
-            </div>
-            <div class="grid-container--item-container">
-                <img src="{% static 'img/producto1.jpg' %}">
-                <div class="grid-container--item-container--title-container">
-                    <h3>Orquídeas Phalaenopsis</h3>
-                </div>
-                <p>añaden un toque de sofisticación Elegantes y coloridas, a cualquier hogar cualquier</p>
-                <a>Ver detalles</a>
-            </div>
+            {% endfor %}
         </div>
     </section>
     <section class="main-products-services-container">
@@ -90,9 +77,9 @@ En Vivero Monte Verde, encontrarás todo lo necesario para el cuidado y embellec
     <section class="contact-section">
         <article class="contact-article">
             <h2 class="contact-article--title">Contáctanos</h2>
-            <p><span>Dirección:</span> Av. Principal 123, San Martín de Porres, Lima</p>
-            <p><span>Teléfono:</span> +51 987 654 321</p>
-            <p><span>Email:</span> info@monteverde.com</p>
+            <p><span>Dirección:</span> Av. Pedro Miota Km 15, Asoc. Los Jazmines Puesto 13 y 14 SJM Perú</p>
+            <p><span>Teléfono:</span> <span id="contact-article--phone">+51 924 864 745</span></p>
+            <p><span>Email: </span>ericka@viveromonteverde.com</p>
             <p><span>Horario:</span> Lunes a Sábado: 9:00 AM - 6:00 PM</p>
         </article>
     </section>

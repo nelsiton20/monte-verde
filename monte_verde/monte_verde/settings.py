@@ -33,7 +33,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'storages',
     'store.apps.StoreConfig',
-    'services'
+    'services',
+    'featured_products'
 ]
 
 MIDDLEWARE = [
