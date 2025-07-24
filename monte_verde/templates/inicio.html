@@ -20,7 +20,7 @@ En Vivero Monte Verde, encontrarás todo lo necesario para el cuidado y embellec
             <div class="grid-container--item-container">
                 <img src="{{ p.product.image.url }}">
                 <div class="grid-container--item-container--title-container">
-                    <h3>{{ p.product.name }}</h3>
+                    <h3>{{ p.title }}</h3>
                 </div>
                 <p>{{ p.content }}</p>
                 <a href="{% url 'product-detail' p.product.slug %}">Ver detalles</a>
