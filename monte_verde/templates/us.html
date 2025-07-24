@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
 
-{% block title %}| Nosotros{% endblock %}
+{% block title %}Nosotros | {% endblock %}
 
-{% block description %}
-Conoce a Vivero Monte Verde, un equipo apasionado por las áreas verdes. Nos dedicamos a ofrecer productos de calidad y servicios personalizados para crear jardines hermosos y saludables.
-{% endblock %}
+{% block description %}Conoce a Vivero Monte Verde, un equipo apasionado por las áreas verdes. Nos dedicamos a ofrecer productos de calidad y servicios personalizados para crear jardines hermosos y saludables.{% endblock %}
 
 {% load static %}
 {% block style %} {% static 'css/us.css' %} {% endblock %}
+
+{% block ogTitle %}Conoce a Vivero Monte Verde{% endblock %}
+{% block ogImage%}{% static 'img/logo.png' %}{% endblock %}
 
 {% block content %}
     <main class="us-main-container">
@@ -16,7 +17,7 @@ Conoce a Vivero Monte Verde, un equipo apasionado por las áreas verdes. Nos ded
                 <h2>Nuestra historia</h2>
                 <span></span>
             </div>
-            <p>En MonteVerde, creemos que la conexión con la naturaleza transforma vidas y espacios. Desde nuestros humildes comienzos, nos hemos dedicado a ofrecer plantas de la más alta calidad, asesoramiento experto y un servicio al cliente excepcional. Somos un equipo apasionado por la jardinería y el paisajismo, comprometidos con hacer de tu hogar un verdadero oasis verde.</p>
+            <p>En Vivero Monte Verde, creemos que la conexión con la naturaleza transforma vidas y espacios. Desde nuestros humildes comienzos, nos hemos dedicado a ofrecer plantas de la más alta calidad, asesoramiento experto y un servicio al cliente excepcional. Somos un equipo apasionado por la jardinería y el paisajismo, comprometidos con hacer de tu hogar un verdadero oasis verde.</p>
             <p>Nos enorgullece ser un vivero que no solo vende plantas, sino que cultiva relaciones y fomenta un amor profundo por el mundo natural. ¡Te invitamos a ser parte de nuestra comunidad verde!</p>
         </div>
         <div class="us-main-container--img-container">

@@ -26,7 +26,7 @@
     box-sizing: border-box;
     padding: 1rem;
     width: 40%;
-    margin-left: auto;
+    margin-right: auto;
     background-color: #1d5c3990;
     color: #fff;
     display: flex;
@@ -503,6 +503,18 @@
     }
     h2 {
         font-size: 1.6em;
+    }
+
+    .title-container--content-container{
+        padding: 6px;
+    }
+
+    .title-container--content-container--title{
+        font-size: 0.85rem;
+
+        & span{
+            font-size: 1rem;
+        }
     }
 
     .grid-container--item-container--title-container{

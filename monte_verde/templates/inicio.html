@@ -1,16 +1,17 @@
 {% extends 'base.html' %}
 
-{% block description %}
-En Vivero Monte Verde, encontrarás todo lo necesario para el cuidado y embellecimiento de tu jardín. Ofrecemos productos de jardinería de alta calidad y servicios profesionales de paisajismo para transformar tu espacio exterior con el mejor cuidado. 
-{% endblock %}
+{% block description %}En Vivero Monte Verde, encontrarás todo lo necesario para el cuidado y embellecimiento de tu jardín. Ofrecemos productos de jardinería de alta calidad y servicios profesionales de paisajismo para transformar tu espacio exterior con el mejor cuidado. {% endblock %}
 
 {% load static %}
 {% block style %} {% static 'css/inicio.css' %} {% endblock %}
 
+{% block ogTitle %}Vivero Monte Verde{% endblock%}
+{% block ogImage%}{% static 'img/logo.png' %}{% endblock %}
+
 {% block content %}
     <div class="title-container">
         <div class="title-container--content-container">
-            <h1 class="title-container--content-container--title"><span>CULTIVA</span> NATURALEZA RESPIRA <span>VIDA</span></h1>
+            <h2 class="title-container--content-container--title"><span>CULTIVA</span> NATURALEZA RESPIRA <span>VIDA</span></h2>
         </div>
     </div>
     <section class="main-products-services-container products-main-container">

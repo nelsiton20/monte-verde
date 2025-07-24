@@ -11,12 +11,14 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Vivero Monte Verde {% block title %}{% endblock %}</title>
+    <title>{% block title %}{% endblock %}Vivero Monte Verde</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href={% block style %} {% endblock %}>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
     <meta name="description" content="{% block description %}{% endblock %}">
+    <meta property="og:title" content="{% block ogTitle %}{% endblock %}">
+    <meta property="og:image" content="{% block ogImage %}{% endblock %}">
     <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/x-icon">
 </head>
 <body>

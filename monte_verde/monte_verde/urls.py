@@ -10,7 +10,7 @@ from django.conf import settings
 handler404 = 'monte_verde.views.custom_page_not_found'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('back-monteverde-dashboard/', admin.site.urls),
     path('', views.index, name='home'),
     path('store/', include('store.urls')),
     path('about-us/', views.us_view, name='about_us'),

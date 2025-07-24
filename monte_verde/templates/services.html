@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
 
-{% block title %}| Servicios {% endblock %}
+{% block title %}Servicios | {% endblock %}
 
-{% block description %}
-Ofrecemos servicios especializados en áreas verdes, incluyendo mantenimiento de jardines, diseño de paisajes y asesoría en cuidado de plantas. ¡Haz crecer tu jardín con nuestros expertos!
-{% endblock %}
+{% block description %}Ofrecemos servicios especializados en áreas verdes, incluyendo mantenimiento de jardines, diseño de paisajes y asesoría en cuidado de plantas. ¡Haz crecer tu jardín con nuestros expertos!{% endblock %}
 
 {% load static %}
 {% block style %} {% static 'css/services.css' %} {% endblock %}
+
+{% block ogTitle %}Servicios de Vivero Monte Verde{% endblock %}
+{% block ogImage%}{% static 'img/logo.png' %}{% endblock %}
 
 {% block content %}
     <section class="main-products-services-container">

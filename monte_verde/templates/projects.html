@@ -1,15 +1,17 @@
 {% extends 'base.html' %}
 
-{% block title %}| Proyectos {% endblock %}
+{% block title %}Proyectos | {% endblock %}
 
-{% block description %}
-Entérate de algunos de los proyectos realizados por el equipo Vivero Monte Verde. Nos esforzamos por embellecer la ciudad con áreas verdes.
-{% endblock %}
+{% block description %}Entérate de algunos de los proyectos realizados por el equipo Vivero Monte Verde. Nos esforzamos por embellecer la ciudad con áreas verdes.{% endblock %}
 
 {% load static %}
 {% block style %} {% static 'css/projects.css' %} {% endblock %}
 
+{% block ogTitle %}Proyectos de Vivero Monte Verde{% endblock %}
+{% block ogImage%}{% static 'img/logo.png' %}{% endblock %}
+
 {% block content %}
+<h1>Proyectos realizados por <strong>Vivero Monte Verde</strong></h1>
 <section class="projects-container">
     <article class="projects-container--item-container">
         <div class="projects-container--item-container--info-container">
