@@ -4,6 +4,7 @@
 {% url 'home' as home %}
 {% url 'about_us' as us %}
 {% url 'services' as services %}
+{% url 'projects' as projects %}
 
 {% load static %}
 
@@ -56,7 +57,7 @@
                 <div class="nav-list--item-container">
                     <a href="{% url 'projects' %}" class="nav-list--item-container--link">
                         <span class="nav-list--item-container-icon"><img src="{% static 'img/nav-icons/project.png' %}"></span>
-                        <li>Proyectos</li>
+                        <li class="nav-list--item-container--link--li {% if request.path == projects%}active{% endif %}">Proyectos</li>
                     </a>
                 </div>
                 <div class="nav-list--item-container shopping-cart">
