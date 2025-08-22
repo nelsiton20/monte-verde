@@ -1,4 +1,5 @@
 from django.shortcuts import get_object_or_404, render
+from django.core.paginator import Paginator
 
 from .models import Product, Category
 from services.models import PhoneNumber
@@ -7,10 +8,15 @@ from services.models import PhoneNumber
 def store(request):
     products = Product.objects.all()
     categories = Category.objects.all()
+
+    paginator = Paginator(products, 3)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
     
     return render(request, 'store/tienda.html', {
         'products': products, 
-        'categories': categories
+        'categories': categories,
+        'page_obj': page_obj
     })
     
 def store_by_category(request, slug):

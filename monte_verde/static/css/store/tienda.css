@@ -136,6 +136,11 @@ body{
 }
 /* ----------------------------- */
 
+/* ------- SECTION PRODUCT CONTAINER ------- */
+.section-product-container{
+    flex: 1;
+}
+/* ----------------------------------------- */
 
 /* -------- PRODUCT CONTAINER --------- */
 .product-list-container{
@@ -143,7 +148,6 @@ body{
     grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     grid-auto-rows: 270px;
     gap: 15px;
-    flex: 1;
 }
 
 .product-container{
@@ -215,6 +219,47 @@ body{
 
 /* ----------------------------------- */
 
+/* ------ PAGINATION ------ */
+.product-container--pagination-container{
+    display: flex;
+    gap: 20px;
+    color: var(--gris-oscuro);
+    justify-content: space-between;
+    margin-top: 40px;
+    padding: 8px 8px;
+    border-top: 1px solid #05612490;
+    border-bottom: 1px solid #05612490;
+    align-items: center;
+}
+
+.pagination--container--items{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pagination--container--item{
+    width: 35px;
+    height: 35px;
+    border: 1px solid var(--verde-menta);
+
+    & a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.pagination--container--item.active{
+    background-color: var(--verde-menta);
+    color: #fff;
+}
+/* ------------------------ */
 
 /* ----- NOTIFICATION ----- */
 .notification-product-container{
@@ -296,6 +341,12 @@ body{
 
     .base--form--container{
         width: 100%;
+    }
+
+    .product-container--pagination-container{
+        flex-direction: column;
+        gap: 10px;
+        align-items: normal;
     }
 }
 
