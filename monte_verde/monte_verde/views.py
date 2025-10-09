@@ -13,13 +13,15 @@ def index(request):
     return render(request, 'inicio.html', { 'number': number, 'featured_products' : featured_products })
 
 def us_view(request):
-    return render(request, 'us.html')
+    number = PhoneNumber.objects.all().order_by('-id').first()
+    return render(request, 'us.html', { 'number': number })
 
 def mail_check(request):
     return render(request, 'mail-check.html')
 
 def projects(request):
-    return render(request, 'projects.html')
+    number = PhoneNumber.objects.all().order_by('-id').first()
+    return render(request, 'projects.html', { 'number': number })
 
 def custom_page_not_found(request, exception=None):
     return render(request, '404.html', status=404)

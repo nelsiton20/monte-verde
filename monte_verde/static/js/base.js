@@ -3,6 +3,7 @@ const nav = document.querySelector(".header--nav");
 const body = document.body;
 const navList = document.querySelector(".nav-list");
 const backgroundNavbar = document.querySelector('.background-navbar');
+const whatsappIcon = document.querySelector('.icon-whatsapp'); // ícono de whatsapp 
 
 /* EVENTO PARA CAMBIAR EL BACKGROUND DEL HEADER
 document.addEventListener('scroll', function() {
@@ -39,3 +40,12 @@ if(localStorage.getItem('shopping_cart')){
         s.textContent = count;
     })
 }
+
+
+// evento para redirigir a chat de WhatsApp
+whatsappIcon.addEventListener('click', () => {
+    const number = document.getElementById('number').value;
+    const telefono = `51${number}`
+    const url = `https://wa.me/${telefono}`;
+    window.open(url, '_blank');
+})

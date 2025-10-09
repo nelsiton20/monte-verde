@@ -234,6 +234,22 @@ h1, h2, h3{
 /* ------------------------ */
 
 
+/* ÍCONO DE WHATSAPP */
+.icon-whatsapp{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 50px;
+    right: 30px;
+    box-shadow: 0 0 8px 0 #000;
+    border-radius: 50%;
+}
+
+.icon-whatsapp:hover{
+    cursor: pointer;
+}
+/* ----------------- */
+
 /* MEDIA QUERIES */
 @media (max-width: 1000px){
     
