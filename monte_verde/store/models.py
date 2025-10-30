@@ -20,6 +20,7 @@ class Product(models.Model):
     slug = models.SlugField(null=False, blank=False, unique=True)
     image = models.ImageField(upload_to='products/', null=False, blank=False)
     category = models.ForeignKey(Category, null=False, blank=False, on_delete=models.CASCADE)
+    updated_at = models.DateTimeField(auto_now=True, null=True)
     
     def __str__(self):
         return self.name

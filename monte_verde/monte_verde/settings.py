@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'storages',
+    'django.contrib.sitemaps',
     'store.apps.StoreConfig',
     'services',
     'featured_products'
