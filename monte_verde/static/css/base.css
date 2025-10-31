@@ -27,6 +27,26 @@ h1, h2, h3{
     flex: 1;
 }
 
+/* CONTENDOR DE INFORMACIÓN */
+.information-header-container{
+    box-sizing: border-box;
+    height: 40px;
+    padding: 24px;
+    background-color: var(--verde-bosque);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-weight: 500;
+}
+
+.information-header--content{
+    text-align: center;
+}
+/* ------------------------ */
+
+
 /* ------ HEADER ------- */
 .header{
     box-sizing: border-box;
@@ -177,6 +197,8 @@ h1, h2, h3{
     margin: auto;
 }
 
+
+
 .footer-section--title{
     font-size: 1rem;
     font-weight: bold;
@@ -252,7 +274,9 @@ h1, h2, h3{
 
 /* MEDIA QUERIES */
 @media (max-width: 1000px){
-    
+    .information-header--content{
+        font-size: 14px;
+    }
 
     .footer-container{
         display: grid;
@@ -262,6 +286,10 @@ h1, h2, h3{
 }
 
 @media (max-width: 900px){
+    .information-header--content{
+        font-size: 13px;
+    }
+
     .header--menu{
         display: block;
     }
@@ -316,6 +344,10 @@ h1, h2, h3{
 }
 
 @media (max-width: 768px){
+    .information-header-container{
+        display: none;
+    }
+
     .footer-container{
         grid-template-columns: auto auto;
         gap: 1.25rem;

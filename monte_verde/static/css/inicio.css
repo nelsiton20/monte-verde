@@ -11,7 +11,7 @@
 .title-container{
     background-image: url("../img/fondo-inicio2.jpg");
     /*background-image: url("../img/vivero.jpg");*/
-    height: calc(100dvh - 60px);
+    height: calc(100dvh - 100px);
     width: 100%;
     background-size: cover;
     background-position: center;
