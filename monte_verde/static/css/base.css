@@ -32,7 +32,7 @@ h1, h2, h3{
     box-sizing: border-box;
     height: 40px;
     padding: 24px;
-    background-color: var(--verde-bosque);
+    background-color: var(--verde-menta);
     color: #fff;
     display: flex;
     align-items: center;
