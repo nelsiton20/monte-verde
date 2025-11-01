@@ -4,6 +4,7 @@ const body = document.body;
 const navList = document.querySelector(".nav-list");
 const backgroundNavbar = document.querySelector('.background-navbar');
 const whatsappIcon = document.querySelector('.icon-whatsapp'); // ícono de whatsapp 
+const contactTrafeOfData = document.getElementById('contact-trafeofdata');
 
 /* EVENTO PARA CAMBIAR EL BACKGROUND DEL HEADER
 document.addEventListener('scroll', function() {
@@ -46,6 +47,13 @@ if(localStorage.getItem('shopping_cart')){
 whatsappIcon.addEventListener('click', () => {
     const number = document.getElementById('number').value;
     const telefono = `51${number}`
+    const url = `https://wa.me/${telefono}`;
+    window.open(url, '_blank');
+})
+
+// Evento para redirigir al chat de Trafe Of Data
+contactTrafeOfData.addEventListener('click', () => {
+    const telefono = '51924290648';
     const url = `https://wa.me/${telefono}`;
     window.open(url, '_blank');
 })

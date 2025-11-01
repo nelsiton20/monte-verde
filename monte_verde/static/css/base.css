@@ -177,6 +177,31 @@ h1, h2, h3{
     margin: auto;
 }
 
+.rights-container{
+    border-top: 1px solid var(--verde-menta);
+    box-sizing: border-box;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 24px;
+    text-align: center;
+    padding: 24px;
+    line-height: 1.5;
+
+    & span{
+        font-family: 'Montserrat', sans-serif;
+        color: yellow;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    & span:hover{
+        cursor: pointer;
+        color: var(--verde-menta);
+    }
+}
+
 .footer-section--title{
     font-size: 1rem;
     font-weight: bold;
@@ -320,6 +345,10 @@ h1, h2, h3{
         grid-template-columns: auto auto;
         gap: 1.25rem;
         justify-content: space-around;
+    }
+
+    .icon-whatsapp{
+        right: 15px;
     }
     
 }
