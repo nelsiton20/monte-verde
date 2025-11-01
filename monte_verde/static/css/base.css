@@ -27,6 +27,27 @@ h1, h2, h3{
     flex: 1;
 }
 
+/* CONTENDOR DE INFORMACIÓN */
+.information-header-container{
+    box-sizing: border-box;
+    height: 40px;
+    padding: 24px;
+    background-color: var(--verde-menta);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-weight: 500;
+}
+
+.information-header--content{
+    color: #fff;
+    text-align: center;
+}
+/* ------------------------ */
+
+
 /* ------ HEADER ------- */
 .header{
     box-sizing: border-box;
@@ -158,7 +179,34 @@ h1, h2, h3{
 }
 
 /* ---------------- END HEADER --------------- */
+.rights-container{
+    border-top: 1px solid var(--verde-menta);
+    box-sizing: border-box;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 24px;
+    text-align: center;
+    padding: 24px;
+    line-height: 1.5;
 
+    & p{
+        color: #fff;
+    }
+
+    & span{
+        font-family: 'Montserrat', sans-serif;
+        color: yellow;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    & span:hover{
+        cursor: pointer;
+        color: var(--verde-menta);
+    }
+}
 
 /* -------- FOOTER -------- */
 .footer{
@@ -177,30 +225,7 @@ h1, h2, h3{
     margin: auto;
 }
 
-.rights-container{
-    border-top: 1px solid var(--verde-menta);
-    box-sizing: border-box;
-    max-width: 1000px;
-    margin: auto;
-    margin-top: 24px;
-    text-align: center;
-    padding: 24px;
-    line-height: 1.5;
 
-    & span{
-        font-family: 'Montserrat', sans-serif;
-        color: yellow;
-        text-decoration: underline;
-        text-underline-offset: 4px;
-        font-style: italic;
-        font-weight: bold;
-    }
-
-    & span:hover{
-        cursor: pointer;
-        color: var(--verde-menta);
-    }
-}
 
 .footer-section--title{
     font-size: 1rem;
@@ -277,7 +302,9 @@ h1, h2, h3{
 
 /* MEDIA QUERIES */
 @media (max-width: 1000px){
-    
+    .information-header--content{
+        font-size: 14px;
+    }
 
     .footer-container{
         display: grid;
@@ -287,6 +314,10 @@ h1, h2, h3{
 }
 
 @media (max-width: 900px){
+    .information-header--content{
+        font-size: 13px;
+    }
+
     .header--menu{
         display: block;
     }
@@ -341,6 +372,10 @@ h1, h2, h3{
 }
 
 @media (max-width: 768px){
+    .information-header-container{
+        display: none;
+    }
+
     .footer-container{
         grid-template-columns: auto auto;
         gap: 1.25rem;
